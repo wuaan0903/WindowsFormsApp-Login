@@ -65,5 +65,13 @@ namespace WindowsFormsApp_Login.User.View
             homeUser.ShowDialog();
             this.Close();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BXH bXH = new BXH();
+            bXH.ShowDialog();
+            this.Close();
+        }
     }
 }

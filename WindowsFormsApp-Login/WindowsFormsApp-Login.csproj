@@ -48,11 +48,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>C:\Users\admin\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="RJCodeAdance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RJCodeAdvance.RJControl2s.1.0.0\lib\net472\RJCodeAdance.RJControls.dll</HintPath>
+    </Reference>
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,6 +86,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\View\BXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\BXH.Designer.cs">
+      <DependentUpon>BXH.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\View\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +103,12 @@
     </Compile>
     <Compile Include="User\View\InforUser.Designer.cs">
       <DependentUpon>InforUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\View\KetQua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\KetQua.Designer.cs">
+      <DependentUpon>KetQua.cs</DependentUpon>
     </Compile>
     <Compile Include="User\View\LamBai.cs">
       <SubType>Form</SubType>
@@ -130,11 +151,17 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\View\BXH.resx">
+      <DependentUpon>BXH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\View\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\View\InforUser.resx">
       <DependentUpon>InforUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\View\KetQua.resx">
+      <DependentUpon>KetQua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\View\LamBai.resx">
       <DependentUpon>LamBai.cs</DependentUpon>

@@ -33,5 +33,21 @@ namespace WindowsFormsApp_Login
             lamBai.ShowDialog();
             this.Close();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            KetQua ketQua = new KetQua();
+            ketQua.ShowDialog();
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BXH bXH = new BXH();
+            bXH.ShowDialog();
+            this.Close();
+        }
     }
 }
