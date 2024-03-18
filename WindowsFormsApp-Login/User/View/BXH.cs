@@ -24,5 +24,64 @@ namespace WindowsFormsApp_Login.User.View
             bXH.ShowDialog();
             this.Close();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            KetQua ketQua = new KetQua();
+            ketQua.ShowDialog();
+            this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeUser homeUser = new HomeUser();
+            homeUser.ShowDialog();
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LamBai lamBai = new LamBai();
+            lamBai.ShowDialog();
+            this.Close();
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            rjDropdownMenu1.Show(rjButton1, -1 / 2 * rjButton1.Width, rjButton1.Height);
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+            this.Close();
+        }
+
+        private void thayĐổiThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InforUser inforUser = new InforUser();
+            inforUser.ShowDialog();
+            this.Close();
+        }
+        private void thayĐổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.ShowDialog();
+            this.Close();
+        }
+        private void vàoThiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LamBai lamBai = new LamBai();
+            lamBai.ShowDialog();
+            this.Close();
+        }
     }
 }

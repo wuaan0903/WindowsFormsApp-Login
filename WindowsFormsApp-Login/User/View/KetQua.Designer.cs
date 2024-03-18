@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,10 +48,15 @@
             this.MonHocOption = new CustomBox.RJControls.RJComboBox();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.rjDropdownMenu1 = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
+            this.vàoThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thayĐổiThôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thayĐổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KetQuaTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.rjDropdownMenu1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +73,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 82);
             this.panel1.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(225)))), ((int)(((byte)(212)))));
+            this.panel2.Location = new System.Drawing.Point(373, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(71, 3);
+            this.panel2.TabIndex = 16;
             // 
             // rjButton1
             // 
@@ -87,6 +102,7 @@
             this.rjButton1.Text = "Nguyễn Minh Quân";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // label4
             // 
@@ -138,6 +154,7 @@
             this.label2.Size = new System.Drawing.Size(94, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Trang chủ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -152,19 +169,19 @@
             // 
             // KetQuaTable
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.KetQuaTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.KetQuaTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.KetQuaTable.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.KetQuaTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.KetQuaTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.KetQuaTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.KetQuaTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.KetQuaTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KetQuaTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -267,13 +284,48 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // panel2
+            // rjDropdownMenu1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(225)))), ((int)(((byte)(212)))));
-            this.panel2.Location = new System.Drawing.Point(373, 60);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(71, 3);
-            this.panel2.TabIndex = 16;
+            this.rjDropdownMenu1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDropdownMenu1.IsMainMenu = true;
+            this.rjDropdownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vàoThiToolStripMenuItem,
+            this.thayĐổiThôngTinToolStripMenuItem,
+            this.thayĐổiMậtKhẩuToolStripMenuItem,
+            this.đăngXuấtToolStripMenuItem});
+            this.rjDropdownMenu1.MenuItemHeight = 25;
+            this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
+            this.rjDropdownMenu1.Name = "rjDropdownMenu1";
+            this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(189, 114);
+            // 
+            // vàoThiToolStripMenuItem
+            // 
+            this.vàoThiToolStripMenuItem.Name = "vàoThiToolStripMenuItem";
+            this.vàoThiToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.vàoThiToolStripMenuItem.Text = "Vào thi";
+            this.vàoThiToolStripMenuItem.Click += new System.EventHandler(this.vàoThiToolStripMenuItem_Click);
+            // 
+            // thayĐổiThôngTinToolStripMenuItem
+            // 
+            this.thayĐổiThôngTinToolStripMenuItem.Name = "thayĐổiThôngTinToolStripMenuItem";
+            this.thayĐổiThôngTinToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.thayĐổiThôngTinToolStripMenuItem.Text = "Thay đổi thông tin";
+            this.thayĐổiThôngTinToolStripMenuItem.Click += new System.EventHandler(this.thayĐổiThôngTinToolStripMenuItem_Click);
+            // 
+            // thayĐổiMậtKhẩuToolStripMenuItem
+            // 
+            this.thayĐổiMậtKhẩuToolStripMenuItem.Name = "thayĐổiMậtKhẩuToolStripMenuItem";
+            this.thayĐổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.thayĐổiMậtKhẩuToolStripMenuItem.Text = "Thay đổi mật khẩu";
+            this.thayĐổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.thayĐổiMậtKhẩuToolStripMenuItem_Click);
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // KetQua
             // 
@@ -294,6 +346,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KetQuaTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.rjDropdownMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -317,5 +370,10 @@
         private CustomBox.RJControls.RJComboBox MonHocOption;
         private RJCodeAdvance.RJControls.RJButton rjButton2;
         private System.Windows.Forms.Panel panel2;
+        private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenu1;
+        private System.Windows.Forms.ToolStripMenuItem vàoThiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thayĐổiThôngTinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thayĐổiMậtKhẩuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
     }
 }

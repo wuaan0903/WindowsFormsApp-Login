@@ -19,7 +19,10 @@ namespace WindowsFormsApp_Login.User.View
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            HomeUser homeUser = new HomeUser();
+            homeUser.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -69,5 +69,29 @@ namespace WindowsFormsApp_Login.User.View
             changePassword.ShowDialog();
             this.Close();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            KetQua ketQua = new KetQua();
+            ketQua.ShowDialog();
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BXH bXH = new BXH();
+            bXH.ShowDialog();
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LamBai lamBai = new LamBai();
+            lamBai.ShowDialog();
+            this.Close();
+        }
     }
 }

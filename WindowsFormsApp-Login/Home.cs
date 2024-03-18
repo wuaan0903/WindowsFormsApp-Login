@@ -29,24 +29,32 @@ namespace WindowsFormsApp_Login
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LamBai lamBai = new LamBai();
-            lamBai.ShowDialog();
+            Home home = new Home();
+            home.ShowDialog();
             this.Close();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            KetQua ketQua = new KetQua();
-            ketQua.ShowDialog();
+            Home home = new Home();
+            home.ShowDialog();
             this.Close();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            BXH bXH = new BXH();
-            bXH.ShowDialog();
+            Home home = new Home();
+            home.ShowDialog();
+            this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.ShowDialog();
             this.Close();
         }
     }
