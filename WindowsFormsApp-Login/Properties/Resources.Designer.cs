@@ -263,6 +263,16 @@ namespace WindowsFormsApp_Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap left_arrow_alt_regular_36 {
+            get {
+                object obj = ResourceManager.GetObject("left-arrow-alt-regular-36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap left_arrow_circle_solid_24 {
             get {
                 object obj = ResourceManager.GetObject("left-arrow-circle-solid-24", resourceCulture);
@@ -276,6 +286,26 @@ namespace WindowsFormsApp_Login.Properties {
         internal static System.Drawing.Bitmap lock_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("lock-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_arrow_alt_regular_36 {
+            get {
+                object obj = ResourceManager.GetObject("right-arrow-alt-regular-36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_arrow_alt_regular_36__1_ {
+            get {
+                object obj = ResourceManager.GetObject("right-arrow-alt-regular-36 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

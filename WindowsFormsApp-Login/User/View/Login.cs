@@ -91,30 +91,41 @@ namespace WindowsFormsApp_Login
             }
             else
             {
-                string querry = "SELECT * FROM Taikhoan WHERE TenTk = '" + tk + "' AND matkhau = '" + pass + "' AND chucvu ='" + chucvu + "' ";
-                if (modify.TaiKhoans(querry).Count > 0)
+                if (chucvu == "Admin")
                 {
-                    MessageBox.Show("Đăng nhập thành công !");
-                    this.Hide();
-                    if (chucvu == "Admin")
+                    string querry = "SELECT * FROM Admin WHERE username = '" + tk + "' AND password = '" + pass + "'";
+                    if (modify.TaiKhoans(querry).Count > 0)
                     {
-                        HomeAdmin home = new HomeAdmin();
-                        home.ShowDialog();
+                        MessageBox.Show("Đăng nhập thành công !");
+                        this.Hide();
+                        HomeAdmin homeAdmin = new HomeAdmin();
+                        homeAdmin.ShowDialog();
                         this.Close();
                     }
                     else
                     {
+                        MessageBox.Show("Tk hoac mk k chinh xac !");
+                    }
+                }
+                else
+                {
+                    string querry = "SELECT * FROM Users WHERE username = '" + tk + "' AND password = '" + pass + "'";
+                    if (modify.TaiKhoans(querry).Count > 0)
+                    {
+                        MessageBox.Show("Đăng nhập thành công !");
+                        this.Hide();
                         HomeUser user = new HomeUser();
                         user.ShowDialog();
                         this.Close();
                     }
-
-
+                    else
+                    {
+                        MessageBox.Show("Tk hoac mk k chinh xac !");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Tk hoặc mật khẩu ko đúng");
-                }
+                
+                
+
             }
         }
 

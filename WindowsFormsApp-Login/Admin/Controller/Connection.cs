@@ -9,7 +9,7 @@ namespace WindowsFormsApp_Login
 {
     class Connection
     {
-        public static string stringConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\CODE\C#\WindowsFormsApp-Login\WindowsFormsApp-Login\Database1.mdf;Integrated Security=True";
+        public static string stringConnection = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=QuanLyAppTracNghiem;Integrated Security=True;";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(stringConnection);

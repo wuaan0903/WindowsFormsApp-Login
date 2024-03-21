@@ -27,7 +27,8 @@ namespace WindowsFormsApp_Login
                     tk.Add(new TaiKhoan(dataReader.GetString(1), dataReader.GetString(2)));
                 }
                 sqlConnection.Close();
-            }    
+            }
+            
 
             return tk;
         }
