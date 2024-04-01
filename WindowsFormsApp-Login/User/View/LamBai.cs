@@ -15,16 +15,28 @@ namespace WindowsFormsApp_Login.User.View
     public partial class LamBai : Form
     {
         List<Question> questions = new List<Question>();
+        List<Exam> exams = new List<Exam>();
         Question question = new Question();
+        ExamModify examModify = new ExamModify();
         int pos = 0;
         Label DeBaiTxt = new Label();
         int choice = 0;
+        int number_Question = 1;
+
+        private Timer countdownTimer;
+        private DateTime targetTime;
+        private DateTime startTime;
+        int id_user, id_exam;
         public LamBai()
         {
-            
             InitializeComponent();
-            
-
+        }
+            public LamBai(int id,int id_Exam)
+        {
+            InitializeComponent();
+            InitializeTimer();
+            id_user = id;
+            id_exam = id_Exam;
             // Thiết lập kích thước cho nhãn
             DeBaiTxt.Size = new Size(415, 60);
             DeBaiTxt.Font = new Font("Montserrat", 10, FontStyle.Bold);
@@ -40,8 +52,8 @@ namespace WindowsFormsApp_Login.User.View
             
 
             // Thiết lập kích thước cho nhãn
-            DapAnATxt.Size = new Size(415, 60);
-            DapAnATxt.Font = new Font("Montserrat", 10, FontStyle.Bold);
+            DapAnATxt.Size = new Size(222, 57);
+            DapAnATxt.Font = new Font("Montserrat", 8, FontStyle.Bold);
             DapAnATxt.Text = "A";
             // Thêm nhãn vào trong một container, chẳng hạn như một Panel
             panel2.Controls.Add(DapAnATxt);
@@ -53,8 +65,8 @@ namespace WindowsFormsApp_Login.User.View
 
 
             // Thiết lập kích thước cho nhãn
-            DapAnBTxt.Size = new Size(415, 60);
-            DapAnBTxt.Font = new Font("Montserrat", 10, FontStyle.Bold);
+            DapAnBTxt.Size = new Size(222, 57);
+            DapAnBTxt.Font = new Font("Montserrat", 8, FontStyle.Bold);
             DapAnBTxt.Text = "B";
             // Thêm nhãn vào trong một container, chẳng hạn như một Panel
             panel3.Controls.Add(DapAnBTxt);
@@ -66,8 +78,8 @@ namespace WindowsFormsApp_Login.User.View
 
 
             // Thiết lập kích thước cho nhãn
-            DapAnCTxt.Size = new Size(415, 60);
-            DapAnCTxt.Font = new Font("Montserrat", 10, FontStyle.Bold);
+            DapAnCTxt.Size = new Size(222, 57);
+            DapAnCTxt.Font = new Font("Montserrat", 8, FontStyle.Bold);
             DapAnCTxt.Text = "C";
             // Thêm nhãn vào trong một container, chẳng hạn như một Panel
             panel4.Controls.Add(DapAnCTxt);
@@ -79,8 +91,8 @@ namespace WindowsFormsApp_Login.User.View
 
 
             // Thiết lập kích thước cho nhãn
-            DapAnDTxt.Size = new Size(415, 60);
-            DapAnDTxt.Font = new Font("Montserrat", 10, FontStyle.Bold);
+            DapAnDTxt.Size = new Size(222, 57);
+            DapAnDTxt.Font = new Font("Montserrat", 8, FontStyle.Bold);
             DapAnDTxt.Text = "D";
             // Thêm nhãn vào trong một container, chẳng hạn như một Panel
             panel5.Controls.Add(DapAnDTxt);
@@ -89,17 +101,20 @@ namespace WindowsFormsApp_Login.User.View
             panel5.Parent = pictureBox1;
             panel5.BackColor = Color.Transparent;
 
+            numberQuestion.Parent = pictureBox1;
+            numberQuestion.BackColor = Color.Transparent;
 
 
 
+            string querry = "SELECT * FROM Question WHERE Id_Exam= '" + id_exam + "' ";
 
-            string querry = "SELECT * FROM Question WHERE Id_Exam=1 ";
-
-            ExamModify examModify = new ExamModify();
+            string exam = "SELECT * FROM list_exam WHERE Id_Exam= '" + id_exam + "' ";
+            exams = examModify.Exams(exam);
 
             questions = examModify.Questions(querry);
 
             View();
+            StartCountdown(DateTime.Now.AddMinutes(exams[0].Time));
         }
         public void View()
         {
@@ -111,6 +126,7 @@ namespace WindowsFormsApp_Login.User.View
             DapAnCTxt.Text = "C. " + question.AnswerC;
             DapAnDTxt.Text = "D. " + question.AnswerD;
             choice = question.Status;
+            numberQuestion.Text = number_Question.ToString();
             switch (question.Status)
             {
                 case 1:
@@ -129,6 +145,33 @@ namespace WindowsFormsApp_Login.User.View
             
         }
 
+        private void InitializeTimer()
+        {
+            countdownTimer = new Timer();
+            countdownTimer.Interval = 1000; // 1 giây
+            countdownTimer.Tick += CountdownTimer_Tick;
+        }
+        private void StartCountdown(DateTime target)
+        {
+            targetTime = target;
+            startTime = DateTime.Now;
+            countdownTimer.Start();
+        }
+
+        private void CountdownTimer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan remainingTime = targetTime - DateTime.Now;
+            if (remainingTime.TotalSeconds > 0)
+            {
+                labelCountdown.Text = remainingTime.ToString(@"hh\:mm\:ss");
+            }
+            else
+            {
+                countdownTimer.Stop();
+                labelCountdown.Text = "00:00:00";
+                MessageBox.Show("Đã hết thời gian!");
+            }
+        }
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
@@ -149,6 +192,7 @@ namespace WindowsFormsApp_Login.User.View
                 DapAnBTxt.BackColor = Color.Transparent;
                 DapAnCTxt.BackColor = Color.Transparent;
                 DapAnDTxt.BackColor = Color.Transparent;
+                number_Question++;
                 View();
                 
             }
@@ -173,6 +217,7 @@ namespace WindowsFormsApp_Login.User.View
                 DapAnBTxt.BackColor = Color.Transparent;
                 DapAnCTxt.BackColor = Color.Transparent;
                 DapAnDTxt.BackColor = Color.Transparent;
+                number_Question--;
                 View();
                 
             }
@@ -226,6 +271,43 @@ namespace WindowsFormsApp_Login.User.View
             DapAnATxt.BackColor = Color.Transparent;
             DapAnDTxt.BackColor = Color.Transparent;
             choice = 3;
+        }
+
+        private void NopBaiBtn_Click(object sender, EventArgs e)
+        {
+            int d = 0;
+            questions[pos].Status = choice;
+            for (int i = 0; i < questions.Count; i++)
+            {
+                if (questions[i].Status == questions[i].Answer) 
+                {
+                    d++;
+                }
+            }
+            countdownTimer.Stop();
+            TimeSpan elapsedTime = DateTime.Now - startTime;
+
+            double tongDiem = ((double)d / questions.Count) * 10;
+            string ketqua = d.ToString() + "/"+questions.Count.ToString();
+            int thoigian = (int)elapsedTime.TotalSeconds;
+
+            string insertHistory = "Insert into History_Test values ('" + id_user + "','" + id_exam + "',N'" + exams[0].Name_exam + "','" + exams[0].Exam_number + "','" + thoigian + "','" + ketqua + "','" + tongDiem + "','" + DateTime.Now.ToString() + "' ) ";
+            examModify.HistoryTest(insertHistory);
+
+            this.Hide();
+            FinalForm finalForm = new FinalForm(ketqua,tongDiem,thoigian,questions);
+            finalForm.ShowDialog();
+            this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void numberQuestion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

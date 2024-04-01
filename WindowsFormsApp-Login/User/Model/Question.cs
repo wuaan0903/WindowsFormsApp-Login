@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Login.User.Model
 {
-    class Question
+    public class Question
     {
         private int id;
         private int id_exam;
@@ -33,6 +33,18 @@ namespace WindowsFormsApp_Login.User.Model
 
         public Question(string question, string answerA, string answerB, string answerC, string answerD, int answer, int status)
         {
+            this.question = question;
+            this.answerA = answerA;
+            this.answerB = answerB;
+            this.answerC = answerC;
+            this.answerD = answerD;
+            this.answer = answer;
+            this.status = status;
+        }
+
+        public Question(int id_exam, string question, string answerA, string answerB, string answerC, string answerD, int answer, int status)
+        {
+            this.id_exam = id_exam;
             this.question = question;
             this.answerA = answerA;
             this.answerB = answerB;

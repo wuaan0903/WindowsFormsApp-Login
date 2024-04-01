@@ -74,17 +74,68 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Controller\Connection.cs" />
+    <Compile Include="Admin\View\AddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\View\AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View\EditQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\View\EditQuestion.Designer.cs">
+      <DependentUpon>EditQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View\FormDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\View\FormDeThi.Designer.cs">
+      <DependentUpon>FormDeThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\View\HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\View\HomeAdmin.Designer.cs">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\View\TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\View\TimKiem.Designer.cs">
+      <DependentUpon>TimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalForm.Designer.cs">
+      <DependentUpon>FinalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Model\Exam.cs" />
+    <Compile Include="User\Model\History.cs" />
+    <Compile Include="User\Model\Subject.cs" />
+    <Compile Include="User\View\ChooseExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\ChooseExam.Designer.cs">
+      <DependentUpon>ChooseExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\View\List_Exam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\List_Exam.Designer.cs">
+      <DependentUpon>List_Exam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\View\ReviewTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\ReviewTest.Designer.cs">
+      <DependentUpon>ReviewTest.cs</DependentUpon>
     </Compile>
     <Compile Include="User\Controller\ExamModify.cs" />
     <Compile Include="User\Model\Question.cs" />
@@ -147,11 +198,35 @@
     <Compile Include="User\View\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\View\AddQuestion.resx">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\EditQuestion.resx">
+      <DependentUpon>EditQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\FormDeThi.resx">
+      <DependentUpon>FormDeThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\View\HomeAdmin.resx">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\TimKiem.resx">
+      <DependentUpon>TimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalForm.resx">
+      <DependentUpon>FinalForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\View\ChooseExam.resx">
+      <DependentUpon>ChooseExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\View\List_Exam.resx">
+      <DependentUpon>List_Exam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\View\ReviewTest.resx">
+      <DependentUpon>ReviewTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\View\BXH.resx">
       <DependentUpon>BXH.cs</DependentUpon>
@@ -227,6 +302,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\bg final.png" />
     <None Include="Resources\left-arrow-alt-regular-36.png" />
     <None Include="Resources\right-arrow-alt-regular-36 %281%29.png" />
     <None Include="Resources\right-arrow-alt-regular-36.png" />

@@ -97,6 +97,7 @@ namespace WindowsFormsApp_Login
                     if (modify.TaiKhoans(querry).Count > 0)
                     {
                         MessageBox.Show("Đăng nhập thành công !");
+                        
                         this.Hide();
                         HomeAdmin homeAdmin = new HomeAdmin();
                         homeAdmin.ShowDialog();
@@ -112,9 +113,12 @@ namespace WindowsFormsApp_Login
                     string querry = "SELECT * FROM Users WHERE username = '" + tk + "' AND password = '" + pass + "'";
                     if (modify.TaiKhoans(querry).Count > 0)
                     {
+                        List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
+                        taiKhoans = modify.TaiKhoans(querry);
                         MessageBox.Show("Đăng nhập thành công !");
+
                         this.Hide();
-                        HomeUser user = new HomeUser();
+                        HomeUser user = new HomeUser(taiKhoans[0].Id);
                         user.ShowDialog();
                         this.Close();
                     }

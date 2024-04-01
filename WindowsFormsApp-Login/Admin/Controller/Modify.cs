@@ -24,7 +24,7 @@ namespace WindowsFormsApp_Login
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    tk.Add(new TaiKhoan(dataReader.GetString(1), dataReader.GetString(2)));
+                    tk.Add(new TaiKhoan(dataReader.GetInt32(0),dataReader.GetString(1), dataReader.GetString(2), dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(5)));
                 }
                 sqlConnection.Close();
             }

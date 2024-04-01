@@ -173,6 +173,16 @@ namespace WindowsFormsApp_Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_final {
+            get {
+                object obj = ResourceManager.GetObject("bg final", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap children_are_reading_books_stack_books_1308_103222 {
             get {
                 object obj = ResourceManager.GetObject("children-are-reading-books-stack-books_1308-103222", resourceCulture);

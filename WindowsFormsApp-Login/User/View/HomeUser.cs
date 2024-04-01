@@ -7,14 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp_Login.User.Controller;
 
 namespace WindowsFormsApp_Login.User.View
 {
     public partial class HomeUser : Form
     {
+        Modify modify = new Modify();
+        int id_user;
         public HomeUser()
         {
             InitializeComponent();
+        }
+        public HomeUser(int id)
+        {
+            InitializeComponent();
+            id_user = id;
+            List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
+            string querry = "SELECT * FROM Users WHERE Id_User = '" + id + "'";
+            taiKhoans = modify.TaiKhoans(querry);
+            FullName.Text = taiKhoans[0].Fullname;
         }
 
         private void thayĐổiThToolStripMenuItem_Click(object sender, EventArgs e)
@@ -24,7 +36,7 @@ namespace WindowsFormsApp_Login.User.View
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            rjDropdownMenu1.Show(rjButton1,- 1/2*rjButton1.Width , rjButton1.Height);
+            rjDropdownMenu1.Show(FullName,- 1/2*FullName.Width , FullName.Height);
             
         }
 
@@ -46,14 +58,14 @@ namespace WindowsFormsApp_Login.User.View
         private void thayĐổiThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InforUser inforUser = new InforUser();
+            InforUser inforUser = new InforUser(id_user);
             inforUser.ShowDialog();
             this.Close();
         }
         private void thayĐổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChangePassword changePassword = new ChangePassword();
+            ChangePassword changePassword = new ChangePassword(id_user);
             changePassword.ShowDialog();
             this.Close();
         }
@@ -61,7 +73,7 @@ namespace WindowsFormsApp_Login.User.View
         private void label2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeUser homeUser = new HomeUser();
+            HomeUser homeUser = new HomeUser(id_user);
             homeUser.ShowDialog();
             this.Close();
         }
@@ -69,23 +81,24 @@ namespace WindowsFormsApp_Login.User.View
         private void vàoThiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LamBai lamBai = new LamBai();
-            lamBai.ShowDialog();
+            ChooseExam chooseExam = new ChooseExam(id_user);
+            chooseExam.ShowDialog();
             this.Close();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LamBai lamBai = new LamBai();
-            lamBai.ShowDialog();
-            this.Close();
+            ChooseExam chooseExam = new ChooseExam(id_user);
+            chooseExam.ShowDialog();
+            this.Close(); 
+
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            KetQua ketQua = new KetQua();
+            KetQua ketQua = new KetQua(id_user);
             ketQua.ShowDialog();
             this.Close();
         }
@@ -93,7 +106,7 @@ namespace WindowsFormsApp_Login.User.View
         private void label4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            BXH bXH = new BXH();
+            BXH bXH = new BXH(id_user);
             bXH.ShowDialog();
             this.Close();
         }

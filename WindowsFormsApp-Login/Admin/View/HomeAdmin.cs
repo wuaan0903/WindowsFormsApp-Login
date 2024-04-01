@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp_Login.Admin.View;
 
 namespace WindowsFormsApp_Login
 {
@@ -24,7 +25,10 @@ namespace WindowsFormsApp_Login
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormDeThi fm = new FormDeThi();
+            fm.ShowDialog();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)

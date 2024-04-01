@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.FullName = new RJCodeAdvance.RJControls.RJButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.panel1.Controls.Add(this.rjButton1);
+            this.panel1.Controls.Add(this.FullName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
@@ -64,27 +64,27 @@
             this.panel1.Size = new System.Drawing.Size(800, 82);
             this.panel1.TabIndex = 2;
             // 
-            // rjButton1
+            // FullName
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(583, 25);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(198, 36);
-            this.rjButton1.TabIndex = 5;
-            this.rjButton1.Text = "Nguyễn Minh Quân";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            this.FullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
+            this.FullName.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
+            this.FullName.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.FullName.BorderRadius = 0;
+            this.FullName.BorderSize = 0;
+            this.FullName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FullName.FlatAppearance.BorderSize = 0;
+            this.FullName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FullName.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.ForeColor = System.Drawing.Color.White;
+            this.FullName.Location = new System.Drawing.Point(583, 25);
+            this.FullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FullName.Name = "FullName";
+            this.FullName.Size = new System.Drawing.Size(198, 36);
+            this.FullName.TabIndex = 5;
+            this.FullName.Text = "Nguyễn Minh Quân";
+            this.FullName.TextColor = System.Drawing.Color.White;
+            this.FullName.UseVisualStyleBackColor = false;
+            this.FullName.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // label4
             // 
@@ -163,6 +163,7 @@
             // rjDropdownMenu1
             // 
             this.rjDropdownMenu1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDropdownMenu1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.rjDropdownMenu1.IsMainMenu = true;
             this.rjDropdownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vàoThiToolStripMenuItem,
@@ -173,7 +174,7 @@
             this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
             this.rjDropdownMenu1.Name = "rjDropdownMenu1";
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.rjDropdownMenu1.Size = new System.Drawing.Size(189, 92);
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(189, 114);
             // 
             // vàoThiToolStripMenuItem
             // 
@@ -257,7 +258,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private RJCodeAdvance.RJControls.RJButton FullName;
         private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenu1;
         private System.Windows.Forms.ToolStripMenuItem vàoThiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thayĐổiThôngTinToolStripMenuItem;

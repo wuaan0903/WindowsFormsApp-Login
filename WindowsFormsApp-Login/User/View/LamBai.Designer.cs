@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.ExitBtn = new RJCodeAdvance.RJControls.RJButton();
+            this.NopBaiBtn = new RJCodeAdvance.RJControls.RJButton();
             this.BackBtn = new RJCodeAdvance.RJControls.RJButton();
             this.NextBtn = new RJCodeAdvance.RJControls.RJButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.numberQuestion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DapAnATxt = new RJCodeAdvance.RJControls.RJButton();
             this.DapAnBTxt = new RJCodeAdvance.RJControls.RJButton();
@@ -43,6 +43,7 @@
             this.DapAnCTxt = new RJCodeAdvance.RJControls.RJButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.DapAnDTxt = new RJCodeAdvance.RJControls.RJButton();
+            this.labelCountdown = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -50,46 +51,47 @@
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // rjButton2
+            // ExitBtn
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(101)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(101)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(56)))), ((int)(((byte)(64)))));
-            this.rjButton2.BorderRadius = 10;
-            this.rjButton2.BorderSize = 2;
-            this.rjButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(65, 253);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(94, 29);
-            this.rjButton2.TabIndex = 2;
-            this.rjButton2.Text = "Thoát";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            this.ExitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(101)))));
+            this.ExitBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(101)))));
+            this.ExitBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(56)))), ((int)(((byte)(64)))));
+            this.ExitBtn.BorderRadius = 10;
+            this.ExitBtn.BorderSize = 2;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.FlatAppearance.BorderSize = 0;
+            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitBtn.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.ForeColor = System.Drawing.Color.White;
+            this.ExitBtn.Location = new System.Drawing.Point(65, 253);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(94, 29);
+            this.ExitBtn.TabIndex = 2;
+            this.ExitBtn.Text = "Thoát";
+            this.ExitBtn.TextColor = System.Drawing.Color.White;
+            this.ExitBtn.UseVisualStyleBackColor = false;
+            this.ExitBtn.Click += new System.EventHandler(this.rjButton2_Click);
             // 
-            // rjButton1
+            // NopBaiBtn
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(185)))), ((int)(((byte)(142)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(185)))), ((int)(((byte)(142)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(128)))), ((int)(((byte)(101)))));
-            this.rjButton1.BorderRadius = 10;
-            this.rjButton1.BorderSize = 2;
-            this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(65, 218);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(94, 29);
-            this.rjButton1.TabIndex = 3;
-            this.rjButton1.Text = "Nộp bài";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.NopBaiBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(185)))), ((int)(((byte)(142)))));
+            this.NopBaiBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(185)))), ((int)(((byte)(142)))));
+            this.NopBaiBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(128)))), ((int)(((byte)(101)))));
+            this.NopBaiBtn.BorderRadius = 10;
+            this.NopBaiBtn.BorderSize = 2;
+            this.NopBaiBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NopBaiBtn.FlatAppearance.BorderSize = 0;
+            this.NopBaiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NopBaiBtn.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NopBaiBtn.ForeColor = System.Drawing.Color.White;
+            this.NopBaiBtn.Location = new System.Drawing.Point(65, 218);
+            this.NopBaiBtn.Name = "NopBaiBtn";
+            this.NopBaiBtn.Size = new System.Drawing.Size(94, 29);
+            this.NopBaiBtn.TabIndex = 3;
+            this.NopBaiBtn.Text = "Nộp bài";
+            this.NopBaiBtn.TextColor = System.Drawing.Color.White;
+            this.NopBaiBtn.UseVisualStyleBackColor = false;
+            this.NopBaiBtn.Click += new System.EventHandler(this.NopBaiBtn_Click);
             // 
             // BackBtn
             // 
@@ -156,17 +158,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(425, 65);
             this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label1
+            // numberQuestion
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(197, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 22);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "1";
+            this.numberQuestion.AutoSize = true;
+            this.numberQuestion.BackColor = System.Drawing.Color.Transparent;
+            this.numberQuestion.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberQuestion.Location = new System.Drawing.Point(196, 163);
+            this.numberQuestion.Name = "numberQuestion";
+            this.numberQuestion.Size = new System.Drawing.Size(19, 26);
+            this.numberQuestion.TabIndex = 11;
+            this.numberQuestion.Text = "1";
+            this.numberQuestion.Click += new System.EventHandler(this.numberQuestion_Click);
             // 
             // panel2
             // 
@@ -186,13 +190,13 @@
             this.DapAnATxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DapAnATxt.FlatAppearance.BorderSize = 0;
             this.DapAnATxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DapAnATxt.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DapAnATxt.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DapAnATxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnATxt.Location = new System.Drawing.Point(5, 3);
             this.DapAnATxt.Name = "DapAnATxt";
             this.DapAnATxt.Size = new System.Drawing.Size(222, 57);
             this.DapAnATxt.TabIndex = 0;
-            this.DapAnATxt.Text = "A.";
+            this.DapAnATxt.Text = "Lập trình hướng đối tượng là phương pháp lập trình cơ bản gần với mã máy. ";
             this.DapAnATxt.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.DapAnATxt.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnATxt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -210,7 +214,7 @@
             this.DapAnBTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DapAnBTxt.FlatAppearance.BorderSize = 0;
             this.DapAnBTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DapAnBTxt.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DapAnBTxt.Font = new System.Drawing.Font("Montserrat", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DapAnBTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnBTxt.Location = new System.Drawing.Point(4, 3);
             this.DapAnBTxt.Name = "DapAnBTxt";
@@ -250,7 +254,7 @@
             this.DapAnCTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DapAnCTxt.FlatAppearance.BorderSize = 0;
             this.DapAnCTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DapAnCTxt.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DapAnCTxt.Font = new System.Drawing.Font("Montserrat", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DapAnCTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnCTxt.Location = new System.Drawing.Point(5, 2);
             this.DapAnCTxt.Name = "DapAnCTxt";
@@ -282,7 +286,7 @@
             this.DapAnDTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DapAnDTxt.FlatAppearance.BorderSize = 0;
             this.DapAnDTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DapAnDTxt.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DapAnDTxt.Font = new System.Drawing.Font("Montserrat", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DapAnDTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnDTxt.Location = new System.Drawing.Point(3, 2);
             this.DapAnDTxt.Name = "DapAnDTxt";
@@ -296,21 +300,34 @@
             this.DapAnDTxt.UseVisualStyleBackColor = false;
             this.DapAnDTxt.Click += new System.EventHandler(this.DapAnDTxt_Click);
             // 
+            // labelCountdown
+            // 
+            this.labelCountdown.AutoSize = true;
+            this.labelCountdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(129)))));
+            this.labelCountdown.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCountdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(56)))), ((int)(((byte)(64)))));
+            this.labelCountdown.Location = new System.Drawing.Point(70, 148);
+            this.labelCountdown.Name = "labelCountdown";
+            this.labelCountdown.Size = new System.Drawing.Size(86, 26);
+            this.labelCountdown.TabIndex = 15;
+            this.labelCountdown.Text = "00:00:00";
+            // 
             // LamBai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 541);
+            this.Controls.Add(this.labelCountdown);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numberQuestion);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.NextBtn);
-            this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.rjButton2);
+            this.Controls.Add(this.NopBaiBtn);
+            this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.pictureBox1);
             this.Name = "LamBai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -329,12 +346,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private RJCodeAdvance.RJControls.RJButton ExitBtn;
+        private RJCodeAdvance.RJControls.RJButton NopBaiBtn;
         private RJCodeAdvance.RJControls.RJButton NextBtn;
         private RJCodeAdvance.RJControls.RJButton BackBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label numberQuestion;
         private System.Windows.Forms.Panel panel2;
         private RJCodeAdvance.RJControls.RJButton DapAnATxt;
         private RJCodeAdvance.RJControls.RJButton DapAnBTxt;
@@ -343,5 +360,6 @@
         private RJCodeAdvance.RJControls.RJButton DapAnCTxt;
         private System.Windows.Forms.Panel panel5;
         private RJCodeAdvance.RJControls.RJButton DapAnDTxt;
+        private System.Windows.Forms.Label labelCountdown;
     }
 }

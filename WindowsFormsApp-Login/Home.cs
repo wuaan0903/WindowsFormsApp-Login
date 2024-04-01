@@ -29,8 +29,8 @@ namespace WindowsFormsApp_Login
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LamBai lamBai = new LamBai();
-            lamBai.ShowDialog();
+            ChooseExam chooseExam = new ChooseExam();
+            chooseExam.ShowDialog();
             this.Close();
         }
 
