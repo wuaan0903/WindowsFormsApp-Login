@@ -39,7 +39,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
@@ -71,13 +70,14 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(427, 114);
+            this.rjButton2.Location = new System.Drawing.Point(627, 114);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(98, 30);
             this.rjButton2.TabIndex = 14;
             this.rjButton2.Text = "Tra cứu";
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // MonHocOption
             // 
@@ -85,26 +85,19 @@
             this.MonHocOption.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
             this.MonHocOption.BorderSize = 1;
             this.MonHocOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.MonHocOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.MonHocOption.ForeColor = System.Drawing.Color.DimGray;
+            this.MonHocOption.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonHocOption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
             this.MonHocOption.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.MonHocOption.Items.AddRange(new object[] {
-            "Lập trình hướng đối tượng",
-            "Toán rời rạc",
-            "Cơ sở dữ liệu",
-            "Kĩ thuật lập trình",
-            "Mạng máy tính",
-            "Trí tuệ nhân tạo",
-            "Hệ điều hành"});
             this.MonHocOption.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.MonHocOption.ListTextColor = System.Drawing.Color.DimGray;
-            this.MonHocOption.Location = new System.Drawing.Point(109, 114);
+            this.MonHocOption.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
+            this.MonHocOption.Location = new System.Drawing.Point(144, 114);
             this.MonHocOption.MinimumSize = new System.Drawing.Size(200, 30);
             this.MonHocOption.Name = "MonHocOption";
             this.MonHocOption.Padding = new System.Windows.Forms.Padding(1);
             this.MonHocOption.Size = new System.Drawing.Size(290, 30);
             this.MonHocOption.TabIndex = 13;
-            this.MonHocOption.Texts = "Lập trình hướng đối tượng";
+            this.MonHocOption.Texts = "Chọn môn học";
+            this.MonHocOption.OnSelectedIndexChanged += new System.EventHandler(this.MonHocOption_OnSelectedIndexChanged);
             // 
             // KetQuaTable
             // 
@@ -127,16 +120,15 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6});
+            this.Column5});
             this.KetQuaTable.DoubleBuffered = true;
             this.KetQuaTable.EnableHeadersVisualStyles = false;
             this.KetQuaTable.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
             this.KetQuaTable.HeaderForeColor = System.Drawing.Color.White;
-            this.KetQuaTable.Location = new System.Drawing.Point(100, 175);
+            this.KetQuaTable.Location = new System.Drawing.Point(144, 183);
             this.KetQuaTable.Name = "KetQuaTable";
             this.KetQuaTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.KetQuaTable.Size = new System.Drawing.Size(682, 319);
+            this.KetQuaTable.Size = new System.Drawing.Size(581, 319);
             this.KetQuaTable.TabIndex = 12;
             // 
             // Column1
@@ -167,11 +159,6 @@
             // 
             this.Column5.HeaderText = "Tổng điểm";
             this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Thời gian";
-            this.Column6.Name = "Column6";
             // 
             // panel1
             // 
@@ -293,8 +280,7 @@
             // 
             // rjDropdownMenu1
             // 
-            this.rjDropdownMenu1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDropdownMenu1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.rjDropdownMenu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjDropdownMenu1.IsMainMenu = true;
             this.rjDropdownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vàoThiToolStripMenuItem,
@@ -305,33 +291,33 @@
             this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
             this.rjDropdownMenu1.Name = "rjDropdownMenu1";
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.rjDropdownMenu1.Size = new System.Drawing.Size(189, 92);
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(192, 92);
             // 
             // vàoThiToolStripMenuItem
             // 
             this.vàoThiToolStripMenuItem.Name = "vàoThiToolStripMenuItem";
-            this.vàoThiToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.vàoThiToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.vàoThiToolStripMenuItem.Text = "Vào thi";
             this.vàoThiToolStripMenuItem.Click += new System.EventHandler(this.vàoThiToolStripMenuItem_Click);
             // 
             // thayĐổiThôngTinToolStripMenuItem
             // 
             this.thayĐổiThôngTinToolStripMenuItem.Name = "thayĐổiThôngTinToolStripMenuItem";
-            this.thayĐổiThôngTinToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.thayĐổiThôngTinToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.thayĐổiThôngTinToolStripMenuItem.Text = "Thay đổi thông tin";
             this.thayĐổiThôngTinToolStripMenuItem.Click += new System.EventHandler(this.thayĐổiThôngTinToolStripMenuItem_Click);
             // 
             // thayĐổiMậtKhẩuToolStripMenuItem
             // 
             this.thayĐổiMậtKhẩuToolStripMenuItem.Name = "thayĐổiMậtKhẩuToolStripMenuItem";
-            this.thayĐổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.thayĐổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.thayĐổiMậtKhẩuToolStripMenuItem.Text = "Thay đổi mật khẩu";
             this.thayĐổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.thayĐổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -349,6 +335,7 @@
             this.Name = "BXH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BXH";
+            this.Load += new System.EventHandler(this.BXH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KetQuaTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -372,16 +359,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenu1;
         private System.Windows.Forms.ToolStripMenuItem vàoThiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thayĐổiThôngTinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thayĐổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

@@ -315,5 +315,283 @@ namespace WindowsFormsApp_Login.User.Controller
         }
 
 
+        public List<TaiKhoan> GetInforUsers(int id_User)
+        {
+            List<TaiKhoan> users = new List<TaiKhoan>();
+            string query = "SELECT * FROM Users WHERE id_User = @UserId";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@UserId", id_User);
+
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            string username = dataReader.GetString(1);
+                            string password = dataReader.GetString(2);
+                            string fullname = dataReader.GetString(3);
+                            string email = dataReader.GetString(4);
+                            string phone_number = dataReader.GetString(5);
+
+                            TaiKhoan user = new TaiKhoan(id_User, username, password, fullname, email, phone_number);
+                            users.Add(user);
+                        }
+                    }
+                }
+            }
+
+            return users;
+        }
+
+        public List<TaiKhoan> UpdateUserInfo(int id_User, string username, string fullname, string email, string phone_number)
+        {
+            string query = "UPDATE Users SET username = @Username, fullname = @Fullname, email = @Email, phone_number = @PhoneNumber WHERE id_User = @UserId";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@Username", username);
+                    sqlCommand.Parameters.AddWithValue("@Fullname", fullname);
+                    sqlCommand.Parameters.AddWithValue("@Email", email);
+                    sqlCommand.Parameters.AddWithValue("@PhoneNumber", phone_number);
+                    sqlCommand.Parameters.AddWithValue("@UserId", id_User);
+
+                    int rowsAffected = sqlCommand.ExecuteNonQuery();
+
+
+                    if (rowsAffected > 0)
+                    {
+
+                        return GetInforUsers(id_User);
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
+
+
+        public List<Ranking> GetRanking()
+        {
+            List<Ranking> rankings = new List<Ranking>();
+            string query = "SELECT * FROM Ranking";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            int id_User = dataReader.GetInt32(0);
+                            string fullname = dataReader.GetString(1);
+                            int completed_Exams = dataReader.GetInt32(2);
+                            int total_Points = dataReader.GetInt32(3);
+
+
+                            // Tạo một đối tượng Ranking từ dữ liệu truy vấn và thêm vào danh sách
+                            Ranking ranking = new Ranking(id_User, fullname, completed_Exams, total_Points);
+                            rankings.Add(ranking);
+                        }
+                    }
+                }
+            }
+
+            return rankings;
+        }
+
+
+
+        public List<Ranking> GetRankTestBySubject(string subject)
+        {
+            List<Ranking> rankings = new List<Ranking>();
+            string query = "SELECT r.Id_User, r.fullname, COUNT(*) AS Completed_Exams, SUM(ht.Total_Point) AS Total_Points " +
+               "FROM Ranking r " +
+               "JOIN History_Test ht ON r.Id_User = ht.Id_User " +
+               "WHERE ht.Name_Exam = @Subject " +
+               "GROUP BY r.Id_User, r.fullname " +
+               "ORDER BY Total_Points DESC";
+
+
+
+
+
+
+
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@Subject", subject);
+
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            Ranking ranking = new Ranking()
+                            {
+                                Id_User = dataReader.GetInt32(0),
+                                Fullname = dataReader.GetString(1),
+                                Completed_Exams = dataReader.GetInt32(2),
+                                Total_Points = dataReader.GetInt32(3)
+                            };
+                            rankings.Add(ranking);
+                        }
+                    }
+                }
+            }
+
+            return rankings;
+        }
+
+
+
+        public bool ChangePassword(int id_User, string newPassword)
+        {
+            string query = "UPDATE Users SET password = @NewPassword WHERE id_User = @UserId";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@NewPassword", newPassword);
+                    sqlCommand.Parameters.AddWithValue("@UserId", id_User);
+
+                    int rowsAffected = sqlCommand.ExecuteNonQuery();
+
+                    return rowsAffected > 0;
+                }
+            }
+        }
+
+
+        public List<History> GetHistoryTests(int id_User)
+        {
+            List<History> historyTests = new List<History>();
+            string query = "SELECT * FROM History_Test WHERE Id_User = @UserId";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@UserId", id_User);
+
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            History historyTest = new History()
+                            {
+                                Id = dataReader.GetInt32(0),
+                                Id_user = dataReader.GetInt32(1),
+                                Id_exam = dataReader.GetInt32(2),
+                                NameExam = dataReader.GetString(3),
+                                NumberExam = dataReader.GetInt32(4),
+                                Time_Completed = dataReader.GetInt32(5),
+                                Result = dataReader.GetString(6),
+                                TotalPoint = dataReader.GetInt32(7),
+                                Date_Time = dataReader.GetString(8)
+                                
+                            };
+                            historyTests.Add(historyTest);
+                        }
+                    }
+                }
+            }
+
+            return historyTests;
+        }
+
+
+        public List<History> GetHistoryTestBySubject(int id_User, string subject)
+        {
+            List<History> historyTests = new List<History>();
+            string query = "SELECT * FROM History_Test WHERE Id_User = @UserId AND Name_Exam = @Subject";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@UserId", id_User);
+                    sqlCommand.Parameters.AddWithValue("@Subject", subject);
+
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            History historyTest = new History()
+                            {
+                                Id = dataReader.GetInt32(0),
+                                Id_user = dataReader.GetInt32(1),
+                                Id_exam = dataReader.GetInt32(2),
+                                NameExam = dataReader.GetString(3),
+                                NumberExam = dataReader.GetInt32(4),
+                                Time_Completed = dataReader.GetInt32(5),
+                                Result = dataReader.GetString(6),
+                                TotalPoint = dataReader.GetInt32(7),
+                                Date_Time = dataReader.GetString(8)
+                            };
+                            historyTests.Add(historyTest);
+                        }
+                    }
+                }
+            }
+
+            return historyTests;
+        }
+
+        public List<Subject> GetSubjectNames()
+        {
+            List<Subject> subjects = new List<Subject>();
+            string query = "SELECT id, nameExam FROM list_subject";
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            int id = dataReader.GetInt32(0);
+                            string nameExam = dataReader.GetString(1);
+
+                            Subject subject = new Subject(id, nameExam);
+                            subjects.Add(subject);
+                        }
+                    }
+                }
+            }
+
+            return subjects;
+        }
+
+
+
+
     }
 }

@@ -10,10 +10,14 @@ namespace WindowsFormsApp_Login.User.Model
     {
         private int id;
         private int id_user;
+        private int id_exam;
         private string nameExam;
         private int numberExam;
         private int time_completed;
         private int totalPoint;
+        private int time_Completed;
+        private string date_Time;
+        private string result;
         public History()
         {
 
@@ -42,6 +46,10 @@ namespace WindowsFormsApp_Login.User.Model
         public string NameExam { get => nameExam; set => nameExam = value; }
         public int NumberExam { get => numberExam; set => numberExam = value; }
         public int Time_completed { get => time_completed; set => time_completed = value; }
+        public int Time_Completed { get => time_Completed; set => time_Completed = value; }
         public int TotalPoint { get => totalPoint; set => totalPoint = value; }
+        public string Date_Time { get => date_Time; set => date_Time = value; }
+        public string Result { get => result; set => result = value; }
+        public int Id_exam { get => id_exam; set => id_exam = value; }
     }
 }

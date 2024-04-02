@@ -92,11 +92,29 @@
     <Compile Include="Admin\View\FormDeThi.Designer.cs">
       <DependentUpon>FormDeThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\View\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\View\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\View\HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\View\HomeAdmin.Designer.cs">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View\MonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\View\MonHoc.Designer.cs">
+      <DependentUpon>MonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View\ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\View\ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\View\TimKiem.cs">
       <SubType>Form</SubType>
@@ -118,12 +136,37 @@
     </Compile>
     <Compile Include="User\Model\Exam.cs" />
     <Compile Include="User\Model\History.cs" />
+    <Compile Include="User\Model\Ranking.cs" />
     <Compile Include="User\Model\Subject.cs" />
+    <Compile Include="User\View\BXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\BXH.Designer.cs">
+      <DependentUpon>BXH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\View\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\View\ChooseExam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User\View\ChooseExam.Designer.cs">
       <DependentUpon>ChooseExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\View\InforUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\InforUser.Designer.cs">
+      <DependentUpon>InforUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\View\KetQua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\KetQua.Designer.cs">
+      <DependentUpon>KetQua.cs</DependentUpon>
     </Compile>
     <Compile Include="User\View\List_Exam.cs">
       <SubType>Form</SubType>
@@ -139,30 +182,6 @@
     </Compile>
     <Compile Include="User\Controller\ExamModify.cs" />
     <Compile Include="User\Model\Question.cs" />
-    <Compile Include="User\View\BXH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\View\BXH.Designer.cs">
-      <DependentUpon>BXH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User\View\ChangePassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\View\ChangePassword.Designer.cs">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User\View\InforUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\View\InforUser.Designer.cs">
-      <DependentUpon>InforUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User\View\KetQua.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\View\KetQua.Designer.cs">
-      <DependentUpon>KetQua.cs</DependentUpon>
-    </Compile>
     <Compile Include="User\View\LamBai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,8 +226,17 @@
     <EmbeddedResource Include="Admin\View\FormDeThi.resx">
       <DependentUpon>FormDeThi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\View\HomeAdmin.resx">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\MonHoc.resx">
+      <DependentUpon>MonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\View\TimKiem.resx">
       <DependentUpon>TimKiem.cs</DependentUpon>
@@ -219,26 +247,26 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\View\ChooseExam.resx">
-      <DependentUpon>ChooseExam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User\View\List_Exam.resx">
-      <DependentUpon>List_Exam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User\View\ReviewTest.resx">
-      <DependentUpon>ReviewTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User\View\BXH.resx">
       <DependentUpon>BXH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\View\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\View\ChooseExam.resx">
+      <DependentUpon>ChooseExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\View\InforUser.resx">
       <DependentUpon>InforUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\View\KetQua.resx">
       <DependentUpon>KetQua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\View\List_Exam.resx">
+      <DependentUpon>List_Exam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\View\ReviewTest.resx">
+      <DependentUpon>ReviewTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\View\LamBai.resx">
       <DependentUpon>LamBai.cs</DependentUpon>
@@ -302,6 +330,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\stats-regular-24.png" />
+    <None Include="Resources\book-regular-24.png" />
+    <None Include="Resources\user-detail-solid-24.png" />
+    <None Include="Resources\book-reader-regular-24.png" />
+    <None Include="Resources\333-18364548.jpg" />
+    <None Include="Resources\dvfevfv-841.jpg" />
+    <None Include="Resources\log-out-circle-regular-24.png" />
     <None Include="Resources\bg final.png" />
     <None Include="Resources\left-arrow-alt-regular-36.png" />
     <None Include="Resources\right-arrow-alt-regular-36 %281%29.png" />

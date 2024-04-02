@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp-Login", "WindowsFormsApp-Login\WindowsFormsApp-Login.csproj", "{AE0AB4A7-B4CE-4B91-8C61-24A28B5A7D26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jack100cu", "WindowsFormsApp-Login\Jack100cu.csproj", "{AE0AB4A7-B4CE-4B91-8C61-24A28B5A7D26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

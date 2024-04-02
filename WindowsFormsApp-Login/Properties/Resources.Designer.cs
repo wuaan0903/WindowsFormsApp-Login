@@ -123,6 +123,16 @@ namespace WindowsFormsApp_Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _333_18364548 {
+            get {
+                object obj = ResourceManager.GetObject("333-18364548", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4283739_1263 {
             get {
                 object obj = ResourceManager.GetObject("4283739_1263", resourceCulture);
@@ -183,6 +193,26 @@ namespace WindowsFormsApp_Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_reader_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("book-reader-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("book-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap children_are_reading_books_stack_books_1308_103222 {
             get {
                 object obj = ResourceManager.GetObject("children-are-reading-books-stack-books_1308-103222", resourceCulture);
@@ -196,6 +226,16 @@ namespace WindowsFormsApp_Login.Properties {
         internal static System.Drawing.Bitmap children_are_reading_books_stack_books_1308_1032221 {
             get {
                 object obj = ResourceManager.GetObject("children-are-reading-books-stack-books_1308-1032221", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dvfevfv_841 {
+            get {
+                object obj = ResourceManager.GetObject("dvfevfv-841", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +343,16 @@ namespace WindowsFormsApp_Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap log_out_circle_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("log-out-circle-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap right_arrow_alt_regular_36 {
             get {
                 object obj = ResourceManager.GetObject("right-arrow-alt-regular-36", resourceCulture);
@@ -316,6 +366,26 @@ namespace WindowsFormsApp_Login.Properties {
         internal static System.Drawing.Bitmap right_arrow_alt_regular_36__1_ {
             get {
                 object obj = ResourceManager.GetObject("right-arrow-alt-regular-36 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stats_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("stats-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_detail_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("user-detail-solid-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

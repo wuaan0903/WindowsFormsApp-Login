@@ -121,11 +121,14 @@
   <data name="29013894_75270541" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\29013894_75270541.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="children-are-reading-books-stack-books_1308-1032221" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\children-are-reading-books-stack-books_1308-103222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="21504082051" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\21504082051.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="left-arrow-alt-regular-36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left-arrow-alt-regular-36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hand-drawn-glossary-illustration_52683-111962" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hand-drawn-glossary-illustration_52683-111962.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +136,14 @@
   <data name="lambai1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Design\lambai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dvfevfv-841" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dvfevfv-841.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="left-arrow-circle-solid-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\left-arrow-circle-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="envelope-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\envelope-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="left-arrow-alt-regular-36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\left-arrow-alt-regular-36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="29013894_7527054" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\29013894_7527054.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,20 +151,38 @@
   <data name="abstract-backdrop-with-curved-wave-pattern-design-generated-by-ai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abstract-backdrop-with-curved-wave-pattern-design-generated-by-ai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="29013894_752705SDS4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\29013894_752705SDS4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg dangky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg dangky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wallpaperflare.com_wallpaper (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wallpaperflare.com_wallpaper (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="29013894_752705SDS4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\29013894_752705SDS4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log-out-circle-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-out-circle-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="home-solid-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="21504082051" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\21504082051.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lambai2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Design\lambai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="book-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg dangky1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg dangky1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="right-arrow-alt-regular-36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right-arrow-alt-regular-36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book-reader-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book-reader-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="children-are-reading-books-stack-books_1308-103222" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\children-are-reading-books-stack-books_1308-103222.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,9 +196,6 @@
   <data name="290ss13894_7527054" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\290ss13894_7527054.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg dangky" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg dangky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="lock-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -190,8 +208,8 @@
   <data name="2150408205" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2150408205.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg dangky1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg dangky1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-detail-solid-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-detail-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hand-drawn-glossary-illustration_52683-1119621" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hand-drawn-glossary-illustration_52683-1119621.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,7 +217,10 @@
   <data name="wallpaperflare1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wallpaperflare.com_wallpaper (2)1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="333-18364548" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\333-18364548.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stats-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stats-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

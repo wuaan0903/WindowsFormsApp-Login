@@ -7,25 +7,70 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp_Login.User.Controller;
+using WindowsFormsApp_Login.User.Model;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp_Login.User.View
 {
     public partial class KetQua : Form
     {
-        int id_user;
-        public KetQua()
+        private int id_User;
+        private ExamModify examModify;
+        public KetQua(int id_User)
         {
             InitializeComponent();
+            string[] row = new string[] { "1", "1", "9", "5 phút 30 giây", "14/3/2024" }; // Dữ liệu cần thêm
+            KetQuaTable.Rows.Add(row); // Thêm dữ liệu vào DataGridView
+            this.id_User = id_User;
+            this.examModify = new ExamModify();
+            DisplayHistoryTests();
 
         }
-        public KetQua(int id)
+
+        private void DisplayHistoryTests()
         {
-            InitializeComponent();
-            id_user = id;
-            string[] row = new string[] { "1", "1","9","5 phút 30 giây", "14/3/2024" }; // Dữ liệu cần thêm
-            KetQuaTable.Rows.Add(row); // Thêm dữ liệu vào DataGridView
+            
+            List<History> historyTests = examModify.GetHistoryTests(id_User);         
+            if (historyTests.Count > 0)
+            {
+                
+                KetQuaTable.Rows.Clear();
+
+                // Duyệt qua từng kết quả và thêm vào DataGridView
+                for (int i = 0; i < historyTests.Count; i++)
+                {
+                    History historyTest = historyTests[i];
+                    string[] row = new string[]
+                    {
+                (i + 1).ToString(),
+                historyTest.Id.ToString(),
+                historyTest.Id_user.ToString(),
+                historyTest.Id_exam.ToString(),
+                historyTest.NameExam,
+                historyTest.NumberExam.ToString(),
+                historyTest.TotalPoint.ToString(),
+                historyTest.Time_Completed.ToString(),
+                historyTest.Date_Time.ToString(),
+                historyTest.Result
+                    };
+
+                    
+                    KetQuaTable.Rows.Add(row);
+                }
+            }
+            else
+            {
+                
+                MessageBox.Show("Bạn chưa làm đề thi nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
+
+
+
+
+
 
         private void rjComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -40,7 +85,7 @@ namespace WindowsFormsApp_Login.User.View
         private void label5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            KetQua ketQua = new KetQua(id_user);
+            KetQua ketQua = new KetQua(id_User);
             ketQua.ShowDialog();
             this.Close();
         }
@@ -48,28 +93,71 @@ namespace WindowsFormsApp_Login.User.View
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChooseExam chooseExam = new ChooseExam(id_user);
-            chooseExam.ShowDialog();
+            LamBai lamBai = new LamBai();
+            lamBai.ShowDialog();
             this.Close();
         }
 
         private void KetQua_Load(object sender, EventArgs e)
         {
+            
+            List<Subject> subjects = examModify.GetSubjectNames();
+
+            
+            foreach (Subject subject in subjects)
+            {
+                MonHocOption.Items.Add(subject.NameExam);
+            }
 
         }
 
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            
-            if (MonHocOption.SelectedIndex != -1)
+        private void DisplayHistoryTests(List<History> historyTests)
+        {       
+            KetQuaTable.Rows.Clear();
+            if (historyTests.Count > 0)
             {
-                string Monhoc = MonHocOption.SelectedItem.ToString();
-                // ComboBox đã được chọn
-                MessageBox.Show(Monhoc);
+                // Duyệt qua từng kết quả và thêm vào DataGridView
+                for (int i = 0; i < historyTests.Count; i++)
+                {
+                    History historyTest = historyTests[i];
+                    string[] row = new string[]
+                    {
+                (i + 1).ToString(), // Thêm STT vào hàng
+                historyTest.Id.ToString(),
+                historyTest.Id_user.ToString(),
+                historyTest.Id_exam.ToString(),
+                historyTest.NameExam,
+                historyTest.NumberExam.ToString(),
+                historyTest.TotalPoint.ToString(),
+                historyTest.Time_Completed.ToString(),
+                historyTest.Date_Time.ToString(),
+                historyTest.Result
+                    };
+
+                    KetQuaTable.Rows.Add(row);
+                }
             }
             else
             {
-                MessageBox.Show(MonHocOption.Texts);
+               
+                MessageBox.Show("Không có kết quả nào cho môn học này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+
+            if (MonHocOption.SelectedIndex != -1)
+            {
+                
+                string monHoc = MonHocOption.SelectedItem.ToString();              
+                List<History> historyTests = examModify.GetHistoryTestBySubject(id_User, monHoc);
+                DisplayHistoryTests(historyTests);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn môn học.");
             }
 
         }
@@ -77,7 +165,7 @@ namespace WindowsFormsApp_Login.User.View
         private void label4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            BXH bXH = new BXH(id_user);
+            BXH bXH = new BXH(id_User);
             bXH.ShowDialog();
             this.Close();
         }
@@ -85,7 +173,7 @@ namespace WindowsFormsApp_Login.User.View
         private void label2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeUser homeUser = new HomeUser(id_user);
+            HomeUser homeUser = new HomeUser(id_User);
             homeUser.ShowDialog();
             this.Close();
         }
@@ -106,23 +194,28 @@ namespace WindowsFormsApp_Login.User.View
         private void thayĐổiThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InforUser inforUser = new InforUser(id_user);
+            InforUser inforUser = new InforUser(id_User);
             inforUser.ShowDialog();
             this.Close();
         }
         private void thayĐổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChangePassword changePassword = new ChangePassword(id_user);
+            ChangePassword changePassword = new ChangePassword(id_User);
             changePassword.ShowDialog();
             this.Close();
         }
         private void vàoThiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChooseExam chooseExam = new ChooseExam(id_user);
-            chooseExam.ShowDialog();
+            LamBai lamBai = new LamBai();
+            lamBai.ShowDialog();
             this.Close();
+        }
+
+        private void MonHocOption_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

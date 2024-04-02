@@ -235,6 +235,57 @@ namespace WindowsFormsApp_Login.Admin.View
                 MessageBox.Show("Chưa chọn kỳ thi để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void rjButton6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDeThi formDeThi = new FormDeThi();
+            formDeThi.ShowDialog();
+            this.Close();
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MonHoc monHoc = new MonHoc();
+            monHoc.ShowDialog();
+            this.Close();
+        }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjCircularBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -48,13 +48,16 @@
             this.thayĐổiThôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thayĐổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KetQuaTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -94,7 +97,7 @@
             this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(583, 25);
             this.rjButton1.Margin = new System.Windows.Forms.Padding(2);
@@ -110,11 +113,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(474, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Xếp hạng";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -123,11 +126,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(371, 31);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 22);
+            this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 3;
             this.label5.Text = "Kết quả";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -136,11 +139,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(286, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 22);
+            this.label3.Size = new System.Drawing.Size(66, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Vào thi";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -149,11 +152,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(175, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 22);
+            this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Trang chủ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -186,21 +189,25 @@
             this.KetQuaTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.KetQuaTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KetQuaTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
             this.Column1,
+            this.Column10,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6});
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9});
             this.KetQuaTable.DoubleBuffered = true;
             this.KetQuaTable.EnableHeadersVisualStyles = false;
             this.KetQuaTable.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
             this.KetQuaTable.HeaderForeColor = System.Drawing.Color.White;
-            this.KetQuaTable.Location = new System.Drawing.Point(28, 170);
+            this.KetQuaTable.Location = new System.Drawing.Point(34, 150);
             this.KetQuaTable.Name = "KetQuaTable";
             this.KetQuaTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.KetQuaTable.Size = new System.Drawing.Size(817, 319);
+            this.KetQuaTable.RowHeadersWidth = 51;
+            this.KetQuaTable.Size = new System.Drawing.Size(806, 379);
             this.KetQuaTable.TabIndex = 7;
             this.KetQuaTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
             // 
@@ -213,23 +220,16 @@
             this.MonHocOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.MonHocOption.ForeColor = System.Drawing.Color.DimGray;
             this.MonHocOption.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.MonHocOption.Items.AddRange(new object[] {
-            "Lập trình hướng đối tượng",
-            "Toán rời rạc",
-            "Cơ sở dữ liệu",
-            "Kĩ thuật lập trình",
-            "Mạng máy tính",
-            "Trí tuệ nhân tạo",
-            "Hệ điều hành"});
             this.MonHocOption.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.MonHocOption.ListTextColor = System.Drawing.Color.DimGray;
-            this.MonHocOption.Location = new System.Drawing.Point(110, 114);
+            this.MonHocOption.Location = new System.Drawing.Point(182, 98);
             this.MonHocOption.MinimumSize = new System.Drawing.Size(200, 30);
             this.MonHocOption.Name = "MonHocOption";
             this.MonHocOption.Padding = new System.Windows.Forms.Padding(1);
             this.MonHocOption.Size = new System.Drawing.Size(290, 30);
             this.MonHocOption.TabIndex = 8;
-            this.MonHocOption.Texts = "Lập trình hướng đối tượng";
+            this.MonHocOption.Texts = "Chọn môn học";
+            this.MonHocOption.OnSelectedIndexChanged += new System.EventHandler(this.MonHocOption_OnSelectedIndexChanged);
             // 
             // rjButton2
             // 
@@ -240,9 +240,9 @@
             this.rjButton2.BorderSize = 0;
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(428, 114);
+            this.rjButton2.Location = new System.Drawing.Point(525, 98);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(98, 30);
             this.rjButton2.TabIndex = 9;
@@ -263,7 +263,8 @@
             // 
             // rjDropdownMenu1
             // 
-            this.rjDropdownMenu1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDropdownMenu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDropdownMenu1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.rjDropdownMenu1.IsMainMenu = true;
             this.rjDropdownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vàoThiToolStripMenuItem,
@@ -274,76 +275,108 @@
             this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
             this.rjDropdownMenu1.Name = "rjDropdownMenu1";
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.rjDropdownMenu1.Size = new System.Drawing.Size(189, 92);
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(192, 92);
             // 
             // vàoThiToolStripMenuItem
             // 
             this.vàoThiToolStripMenuItem.Name = "vàoThiToolStripMenuItem";
-            this.vàoThiToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.vàoThiToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.vàoThiToolStripMenuItem.Text = "Vào thi";
             this.vàoThiToolStripMenuItem.Click += new System.EventHandler(this.vàoThiToolStripMenuItem_Click);
             // 
             // thayĐổiThôngTinToolStripMenuItem
             // 
             this.thayĐổiThôngTinToolStripMenuItem.Name = "thayĐổiThôngTinToolStripMenuItem";
-            this.thayĐổiThôngTinToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.thayĐổiThôngTinToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.thayĐổiThôngTinToolStripMenuItem.Text = "Thay đổi thông tin";
             this.thayĐổiThôngTinToolStripMenuItem.Click += new System.EventHandler(this.thayĐổiThôngTinToolStripMenuItem_Click);
             // 
             // thayĐổiMậtKhẩuToolStripMenuItem
             // 
             this.thayĐổiMậtKhẩuToolStripMenuItem.Name = "thayĐổiMậtKhẩuToolStripMenuItem";
-            this.thayĐổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.thayĐổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.thayĐổiMậtKhẩuToolStripMenuItem.Text = "Thay đổi mật khẩu";
             this.thayĐổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.thayĐổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "STT";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 30;
-            // 
             // Column1
             // 
-            this.Column1.HeaderText = "Môn thi";
+            this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
+            this.Column1.Width = 30;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "ID";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.Visible = false;
+            this.Column10.Width = 125;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Đề số";
+            this.Column2.HeaderText = "Id_User";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 70;
+            this.Column2.Visible = false;
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Điểm ";
+            this.Column3.HeaderText = "Id_Exam";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 50;
+            this.Column3.Visible = false;
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Thời gian hoàn thành";
+            this.Column4.HeaderText = "Môn thi";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 175;
+            this.Column4.Width = 200;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Ngày hoàn thành";
+            this.Column5.HeaderText = "Đề số";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
+            this.Column5.Width = 70;
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Trạng thái";
+            this.Column6.HeaderText = "Điểm";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.Width = 50;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Thời gian hoàn thành";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 175;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Ngày hoàn thành";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 150;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Kết quả";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 80;
             // 
             // KetQua
             // 
@@ -388,12 +421,15 @@
         private System.Windows.Forms.ToolStripMenuItem thayĐổiThôngTinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thayĐổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }

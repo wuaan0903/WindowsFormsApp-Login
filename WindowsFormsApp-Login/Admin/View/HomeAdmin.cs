@@ -38,5 +38,51 @@ namespace WindowsFormsApp_Login
             login.ShowDialog();
             this.Close();
         }
+
+        private void HomeAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDeThi formDeThi = new FormDeThi();
+            formDeThi.ShowDialog();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+            this.Close();
+        }
     }
 }

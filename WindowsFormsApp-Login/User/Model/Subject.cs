@@ -10,7 +10,7 @@ namespace WindowsFormsApp_Login.User.Model
     {
         private int id;
         private string nameExam;
-        private int totalExam;
+
         public Subject()
         {
 
@@ -21,22 +21,18 @@ namespace WindowsFormsApp_Login.User.Model
             this.nameExam = nameExam;
         }
 
-        public Subject(string nameExam, int totalExam)
-        {
-            this.nameExam = nameExam;
-            this.totalExam = totalExam;
-        }
 
-        public Subject(int id, string nameExam, int totalExam)
+
+        public Subject(int id, string nameExam)
         {
             this.id = id;
             this.nameExam = nameExam;
-            this.totalExam = totalExam;
+
         }
 
         public int Id { get => id; set => id = value; }
         public string NameExam { get => nameExam; set => nameExam = value; }
-        public int TotalExam { get => totalExam; set => totalExam = value; }
+
     }
 
 }
