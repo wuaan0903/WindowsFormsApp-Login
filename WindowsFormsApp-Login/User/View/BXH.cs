@@ -34,22 +34,22 @@ namespace WindowsFormsApp_Login.User.View
             if (rankings != null && rankings.Count > 0)
             {
                 KetQuaTable.Rows.Clear();
-                
-                for(int i = 0; i < rankings.Count; i++)
+
+                for (int i = 0; i < rankings.Count; i++)
                 {
                     Ranking ranking = rankings[i];
+                    string totalTime = ranking.Total_Time.ToString() + "s"; // Thêm chữ "s" vào cuối giá trị Total_Time
                     string[] row = new string[]
                     {
-                       (i+1).ToString(),    
+                       (i+1).ToString(),
                        ranking.Id_User.ToString(),
                        ranking.Fullname.ToString(),
                        ranking.Completed_Exams.ToString(),
                        ranking.Total_Points.ToString(),
-                        
-                };
+                       totalTime // Sử dụng biến totalTime đã thêm chữ "s"
+                    };
                     KetQuaTable.Rows.Add(row);
-                
-                }      
+                }
             }
             else
             { 
@@ -84,8 +84,8 @@ namespace WindowsFormsApp_Login.User.View
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LamBai lamBai = new LamBai();
-            lamBai.ShowDialog();
+            ChooseExam chooseExam = new ChooseExam(id_User);
+            chooseExam.ShowDialog();
             this.Close();
         }
 
@@ -155,17 +155,19 @@ namespace WindowsFormsApp_Login.User.View
                
                 KetQuaTable.Rows.Clear();
 
-                
+
                 for (int i = 0; i < rankings.Count; i++)
                 {
                     Ranking ranking = rankings[i];
+                    string totalTime = ranking.Total_Time.ToString() + "s"; // Thêm chữ "s" vào cuối giá trị Total_Time
                     string[] row = new string[]
                     {
-                (i+1).ToString(),
-                ranking.Id_User.ToString(),
-                ranking.Fullname.ToString(),
-                ranking.Completed_Exams.ToString(),
-                ranking.Total_Points.ToString(),
+                       (i+1).ToString(),
+                       ranking.Id_User.ToString(),
+                       ranking.Fullname.ToString(),
+                       ranking.Completed_Exams.ToString(),
+                       ranking.Total_Points.ToString(),
+                       totalTime // Sử dụng biến totalTime đã thêm chữ "s"
                     };
                     KetQuaTable.Rows.Add(row);
                 }
@@ -174,6 +176,11 @@ namespace WindowsFormsApp_Login.User.View
             {
                 MessageBox.Show("Không có dữ liệu xếp hạng cho môn học đã chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private void KetQuaTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

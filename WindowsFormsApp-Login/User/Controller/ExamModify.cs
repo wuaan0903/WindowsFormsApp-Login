@@ -3,15 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
+using System.Windows.Forms;
 using WindowsFormsApp_Login.User.Model;
 
 namespace WindowsFormsApp_Login.User.Controller
 {
     internal class ExamModify
     {
-        public ExamModify() { 
+        public ExamModify()
+        {
         }
         SqlCommand sqlCommand;
         SqlDataReader dataReader;
@@ -26,7 +30,7 @@ namespace WindowsFormsApp_Login.User.Controller
                 while (dataReader.Read())
                 {
                     q.Add(new Question(dataReader.GetString(2), dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(5), dataReader.GetString(6), dataReader.GetInt32(7), dataReader.GetInt32(8)));
-                    
+
                 }
                 sqlConnection.Close();
             }
@@ -59,7 +63,7 @@ namespace WindowsFormsApp_Login.User.Controller
                 dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    ex.Add(new Exam(dataReader.GetInt32(0),dataReader.GetString(1), dataReader.GetInt32(2), dataReader.GetInt32(3), dataReader.GetInt32(4)));
+                    ex.Add(new Exam(dataReader.GetInt32(0), dataReader.GetString(1), dataReader.GetInt32(2), dataReader.GetInt32(3), dataReader.GetInt32(4)));
                 }
                 sqlConnection.Close();
             }
@@ -81,7 +85,7 @@ namespace WindowsFormsApp_Login.User.Controller
             }
             return hs;
         }
-        public int CountExam(string querry,string nameExam,int id)
+        public int CountExam(string querry, string nameExam, int id)
         {
             int count = 0;
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
@@ -93,7 +97,7 @@ namespace WindowsFormsApp_Login.User.Controller
 
                 while (dataReader.Read())
                 {
-                    
+
                     int id_user = dataReader.GetInt32(0);
                     string name_exam = dataReader.GetString(1);
                     int different_number_exams = dataReader.GetInt32(2);
@@ -117,7 +121,7 @@ namespace WindowsFormsApp_Login.User.Controller
                 sqlCommand.ExecuteNonQuery();
                 sqlConnection.Close();
 
-            }    
+            }
         }
 
         public List<Exam> GetExams(string query)
@@ -384,7 +388,8 @@ namespace WindowsFormsApp_Login.User.Controller
         public List<Ranking> GetRanking()
         {
             List<Ranking> rankings = new List<Ranking>();
-            string query = "SELECT * FROM Ranking";
+            string query = "SELECT \r\n    U.Id_User,\r\n    U.fullname,\r\n    COALESCE(COUNT(HT.Id_Exam), 0) AS Completed_Exams,\r\n    COALESCE(SUM(HT.Total_Point), 0) AS Total_Points,\r\n    COALESCE(SUM(HT.Time_Completed), 0) AS Total_Time\r\nFROM \r\n    Users U\r\nLEFT JOIN \r\n    History_Test HT ON U.Id_User = HT.Id_User \r\nWHERE\r\n    HT.Total_Point IS NOT NULL\r\nGROUP BY \r\n    U.Id_User, U.fullname\r\nORDER BY \r\n    SUM(HT.Total_Point) DESC;";
+
 
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
@@ -400,10 +405,11 @@ namespace WindowsFormsApp_Login.User.Controller
                             string fullname = dataReader.GetString(1);
                             int completed_Exams = dataReader.GetInt32(2);
                             int total_Points = dataReader.GetInt32(3);
+                            int total_Time = dataReader.GetInt32(4);
 
 
-                            // Tạo một đối tượng Ranking từ dữ liệu truy vấn và thêm vào danh sách
-                            Ranking ranking = new Ranking(id_User, fullname, completed_Exams, total_Points);
+
+                            Ranking ranking = new Ranking(id_User, fullname, completed_Exams, total_Points, total_Time);
                             rankings.Add(ranking);
                         }
                     }
@@ -418,18 +424,13 @@ namespace WindowsFormsApp_Login.User.Controller
         public List<Ranking> GetRankTestBySubject(string subject)
         {
             List<Ranking> rankings = new List<Ranking>();
-            string query = "SELECT r.Id_User, r.fullname, COUNT(*) AS Completed_Exams, SUM(ht.Total_Point) AS Total_Points " +
-               "FROM Ranking r " +
-               "JOIN History_Test ht ON r.Id_User = ht.Id_User " +
-               "WHERE ht.Name_Exam = @Subject " +
-               "GROUP BY r.Id_User, r.fullname " +
-               "ORDER BY Total_Points DESC";
-
-
-
-
-
-
+            string query = @"SELECT U.Id_User, U.fullname, COUNT(HT.Id_Exam) AS Completed_Exams, 
+                    SUM(HT.Total_Point) AS Total_Points, SUM(HT.Time_Completed) AS Total_Time
+                 FROM Users U
+                 JOIN History_Test HT ON U.Id_User = HT.Id_User
+                 WHERE HT.NameExam = @Subject
+                 GROUP BY U.Id_User, U.fullname
+                 ORDER BY Total_Points DESC";
 
 
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
@@ -449,7 +450,8 @@ namespace WindowsFormsApp_Login.User.Controller
                                 Id_User = dataReader.GetInt32(0),
                                 Fullname = dataReader.GetString(1),
                                 Completed_Exams = dataReader.GetInt32(2),
-                                Total_Points = dataReader.GetInt32(3)
+                                Total_Points = dataReader.GetInt32(3),
+                                Total_Time = dataReader.GetInt32(4)
                             };
                             rankings.Add(ranking);
                         }
@@ -511,7 +513,7 @@ namespace WindowsFormsApp_Login.User.Controller
                                 Result = dataReader.GetString(6),
                                 TotalPoint = dataReader.GetInt32(7),
                                 Date_Time = dataReader.GetString(8)
-                                
+
                             };
                             historyTests.Add(historyTest);
                         }
@@ -526,7 +528,7 @@ namespace WindowsFormsApp_Login.User.Controller
         public List<History> GetHistoryTestBySubject(int id_User, string subject)
         {
             List<History> historyTests = new List<History>();
-            string query = "SELECT * FROM History_Test WHERE Id_User = @UserId AND Name_Exam = @Subject";
+            string query = "SELECT * FROM History_Test WHERE Id_User = @UserId AND NameExam = @Subject";
 
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {

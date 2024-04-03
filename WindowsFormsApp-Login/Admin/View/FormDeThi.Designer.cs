@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cB_tende = new System.Windows.Forms.ComboBox();
             this.tB_deso = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton6 = new RJCodeAdvance.RJControls.RJButton();
+            this.cB_tende = new RJCodeAdvance.RJControls.RJComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.listEx_table)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularBox1)).BeginInit();
@@ -110,24 +110,13 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Số câu :";
             // 
-            // cB_tende
-            // 
-            this.cB_tende.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cB_tende.FormattingEnabled = true;
-            this.cB_tende.Location = new System.Drawing.Point(469, 156);
-            this.cB_tende.Margin = new System.Windows.Forms.Padding(2);
-            this.cB_tende.Name = "cB_tende";
-            this.cB_tende.Size = new System.Drawing.Size(194, 26);
-            this.cB_tende.TabIndex = 9;
-            this.cB_tende.SelectedIndexChanged += new System.EventHandler(this.cB_tende_SelectedIndexChanged);
-            // 
             // tB_deso
             // 
             this.tB_deso.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tB_deso.Location = new System.Drawing.Point(469, 194);
             this.tB_deso.Margin = new System.Windows.Forms.Padding(2);
             this.tB_deso.Name = "tB_deso";
-            this.tB_deso.Size = new System.Drawing.Size(194, 23);
+            this.tB_deso.Size = new System.Drawing.Size(260, 23);
             this.tB_deso.TabIndex = 10;
             // 
             // label5
@@ -211,19 +200,19 @@
             // 
             // listEx_table
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.listEx_table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.listEx_table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.listEx_table.BackgroundColor = System.Drawing.Color.White;
             this.listEx_table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listEx_table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listEx_table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listEx_table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.listEx_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listEx_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -522,12 +511,33 @@
             this.rjButton6.UseVisualStyleBackColor = false;
             this.rjButton6.Click += new System.EventHandler(this.rjButton6_Click);
             // 
+            // cB_tende
+            // 
+            this.cB_tende.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cB_tende.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.cB_tende.BorderSize = 1;
+            this.cB_tende.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cB_tende.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cB_tende.ForeColor = System.Drawing.Color.DimGray;
+            this.cB_tende.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cB_tende.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cB_tende.ListTextColor = System.Drawing.Color.DimGray;
+            this.cB_tende.Location = new System.Drawing.Point(469, 147);
+            this.cB_tende.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cB_tende.Name = "cB_tende";
+            this.cB_tende.Padding = new System.Windows.Forms.Padding(1);
+            this.cB_tende.Size = new System.Drawing.Size(260, 30);
+            this.cB_tende.TabIndex = 48;
+            this.cB_tende.Texts = "";
+            this.cB_tende.OnSelectedIndexChanged += new System.EventHandler(this.cB_tende_OnSelectedIndexChanged);
+            // 
             // FormDeThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1064, 597);
+            this.Controls.Add(this.cB_tende);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnXoa);
             this.Controls.Add(this.BtnThem);
@@ -540,7 +550,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tB_deso);
-            this.Controls.Add(this.cB_tende);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -563,7 +572,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cB_tende;
         private System.Windows.Forms.TextBox tB_deso;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -590,5 +598,6 @@
         private RJCodeAdvance.RJControls.RJButton rjButton3;
         private RJCodeAdvance.RJControls.RJButton rjButton1;
         private RJCodeAdvance.RJControls.RJButton rjButton6;
+        private RJCodeAdvance.RJControls.RJComboBox cB_tende;
     }
 }

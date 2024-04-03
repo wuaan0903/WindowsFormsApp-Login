@@ -24,10 +24,11 @@ namespace WindowsFormsApp_Login
         {
             InitializeComponent();
         }
-        public ReviewTest(List<Question> q)
+        int id_user;
+        public ReviewTest(List<Question> q,int id)
         {
             InitializeComponent();
-
+            id_user = id;
             // Thiết lập kích thước cho nhãn
             DeBaiTxt.Size = new Size(415, 60);
             DeBaiTxt.Font = new Font("Montserrat", 10, FontStyle.Bold);
@@ -169,7 +170,7 @@ namespace WindowsFormsApp_Login
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeUser homeUser = new HomeUser();
+            HomeUser homeUser = new HomeUser(id_user);
             homeUser.ShowDialog();
             this.Close();
         }

@@ -18,9 +18,11 @@ namespace WindowsFormsApp_Login
             InitializeComponent();
         }
         List<Question> q = new List<Question>();
-        public FinalForm(string kq,double tongdiem,int thoigian, List<Question> questions)
+        int id_user;
+        public FinalForm(int id,string kq,double tongdiem,int thoigian, List<Question> questions)
         {
             InitializeComponent();
+            id_user = id;
             ketqua.Text = kq;
             tongDiem.Text = tongdiem.ToString();
             TimeSpan timeSpan = TimeSpan.FromSeconds(thoigian);
@@ -40,7 +42,7 @@ namespace WindowsFormsApp_Login
         private void rjButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ReviewTest reviewTest = new ReviewTest(q);
+            ReviewTest reviewTest = new ReviewTest(q,id_user);
             reviewTest.ShowDialog();
             this.Close();
         }

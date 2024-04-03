@@ -15,9 +15,9 @@ using LiveCharts.Wpf;
 
 namespace WindowsFormsApp_Login.Admin.View
 {
-    public partial class ThongKe : Form
+    public partial class chart : Form
     {
-        public ThongKe()
+        public chart()
         {
             InitializeComponent();
 
@@ -41,7 +41,6 @@ namespace WindowsFormsApp_Login.Admin.View
                 JohnSeries
             };
         }
-
         public LineSeries MariaSeries { get; set; }
         public LineSeries CharlesSeries { get; set; }
         public LineSeries JohnSeries { get; set; }
@@ -67,14 +66,9 @@ namespace WindowsFormsApp_Login.Admin.View
                 : Visibility.Visible;
         }
 
-
-
-        private void rjButton3_Click(object sender, EventArgs e)
+        private void chart_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            MonHoc monHoc = new MonHoc();
-            monHoc.ShowDialog();
-            this.Close();
+
         }
     }
 }

@@ -176,7 +176,7 @@ namespace WindowsFormsApp_Login.User.View
         private void rjButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeUser homeUser = new HomeUser();
+            HomeUser homeUser = new HomeUser(id_user);
             homeUser.ShowDialog();
             this.Close();
         }
@@ -295,7 +295,7 @@ namespace WindowsFormsApp_Login.User.View
             examModify.HistoryTest(insertHistory);
 
             this.Hide();
-            FinalForm finalForm = new FinalForm(ketqua,tongDiem,thoigian,questions);
+            FinalForm finalForm = new FinalForm(id_user, ketqua, tongDiem, thoigian, questions);
             finalForm.ShowDialog();
             this.Close();
         }

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -43,14 +41,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rjButton7 = new RJCodeAdvance.RJControls.RJButton();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.rjButton8 = new RJCodeAdvance.RJControls.RJButton();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -132,8 +127,8 @@
             // 
             // rjButton4
             // 
-            this.rjButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
-            this.rjButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.rjButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(117)))), ((int)(((byte)(248)))));
+            this.rjButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(117)))), ((int)(((byte)(248)))));
             this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rjButton4.BorderRadius = 22;
             this.rjButton4.BorderSize = 0;
@@ -154,8 +149,8 @@
             // 
             // rjButton3
             // 
-            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(117)))), ((int)(((byte)(248)))));
-            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(117)))), ((int)(((byte)(248)))));
+            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
             this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.rjButton3.BorderRadius = 22;
             this.rjButton3.BorderSize = 0;
@@ -173,6 +168,7 @@
             this.rjButton3.Text = "Quản lý môn học";
             this.rjButton3.TextColor = System.Drawing.Color.White;
             this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.rjButton3_Click);
             // 
             // rjButton1
             // 
@@ -229,11 +225,11 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(292, 32);
+            this.rjButton2.Location = new System.Drawing.Point(278, 17);
             this.rjButton2.Margin = new System.Windows.Forms.Padding(6);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Padding = new System.Windows.Forms.Padding(15);
-            this.rjButton2.Size = new System.Drawing.Size(356, 123);
+            this.rjButton2.Size = new System.Drawing.Size(243, 120);
             this.rjButton2.TabIndex = 50;
             this.rjButton2.Text = "Tổng số đề thi";
             this.rjButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -246,11 +242,11 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
             this.label1.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(433, 86);
+            this.label1.Location = new System.Drawing.Point(367, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 51);
+            this.label1.Size = new System.Drawing.Size(69, 51);
             this.label1.TabIndex = 52;
-            this.label1.Text = "60";
+            this.label1.Text = "30";
             // 
             // label2
             // 
@@ -258,11 +254,11 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
             this.label2.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(823, 86);
+            this.label2.Location = new System.Drawing.Point(634, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 51);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "120";
+            this.label2.Size = new System.Drawing.Size(61, 51);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "16";
             // 
             // rjButton7
             // 
@@ -275,85 +271,78 @@
             this.rjButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton7.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton7.ForeColor = System.Drawing.Color.White;
-            this.rjButton7.Location = new System.Drawing.Point(682, 32);
+            this.rjButton7.Location = new System.Drawing.Point(544, 17);
             this.rjButton7.Margin = new System.Windows.Forms.Padding(6);
             this.rjButton7.Name = "rjButton7";
-            this.rjButton7.Padding = new System.Windows.Forms.Padding(15);
-            this.rjButton7.Size = new System.Drawing.Size(356, 123);
-            this.rjButton7.TabIndex = 53;
+            this.rjButton7.Padding = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.rjButton7.Size = new System.Drawing.Size(243, 120);
+            this.rjButton7.TabIndex = 56;
             this.rjButton7.Text = "Tổng số người dùng";
             this.rjButton7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.rjButton7.TextColor = System.Drawing.Color.White;
             this.rjButton7.UseVisualStyleBackColor = false;
             // 
-            // bunifuCustomDataGrid1
+            // label3
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(292, 342);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(746, 222);
-            this.bunifuCustomDataGrid1.TabIndex = 55;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.label3.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(899, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 51);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "60";
             // 
-            // Column1
+            // rjButton8
             // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
+            this.rjButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.rjButton8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.rjButton8.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton8.BorderRadius = 30;
+            this.rjButton8.BorderSize = 0;
+            this.rjButton8.FlatAppearance.BorderSize = 0;
+            this.rjButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton8.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton8.ForeColor = System.Drawing.Color.White;
+            this.rjButton8.Location = new System.Drawing.Point(810, 17);
+            this.rjButton8.Margin = new System.Windows.Forms.Padding(6);
+            this.rjButton8.Name = "rjButton8";
+            this.rjButton8.Padding = new System.Windows.Forms.Padding(15);
+            this.rjButton8.Size = new System.Drawing.Size(243, 120);
+            this.rjButton8.TabIndex = 58;
+            this.rjButton8.Text = "Tổng số lượt thi";
+            this.rjButton8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.rjButton8.TextColor = System.Drawing.Color.White;
+            this.rjButton8.UseVisualStyleBackColor = false;
             // 
-            // Column2
+            // cartesianChart1
             // 
-            this.Column2.HeaderText = "Môn học";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số đề thi";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Lượt thi";
-            this.Column4.Name = "Column4";
+            this.cartesianChart1.Location = new System.Drawing.Point(289, 203);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(752, 364);
+            this.cartesianChart1.TabIndex = 60;
+            this.cartesianChart1.Text = "cartesianChart1";
             // 
             // ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 597);
-            this.Controls.Add(this.bunifuCustomDataGrid1);
+            this.Controls.Add(this.cartesianChart1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.rjButton8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rjButton7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.panel1);
             this.Name = "ThongKe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongKe";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,10 +363,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private RJCodeAdvance.RJControls.RJButton rjButton7;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label3;
+        private RJCodeAdvance.RJControls.RJButton rjButton8;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }

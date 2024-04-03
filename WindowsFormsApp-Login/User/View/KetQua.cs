@@ -93,8 +93,8 @@ namespace WindowsFormsApp_Login.User.View
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LamBai lamBai = new LamBai();
-            lamBai.ShowDialog();
+            ChooseExam chooseExam = new ChooseExam(id_User);
+            chooseExam.ShowDialog();
             this.Close();
         }
 

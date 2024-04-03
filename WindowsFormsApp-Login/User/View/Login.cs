@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp_Login.Admin.View;
 using WindowsFormsApp_Login.User.View;
 
 namespace WindowsFormsApp_Login
@@ -99,8 +100,8 @@ namespace WindowsFormsApp_Login
                         MessageBox.Show("Đăng nhập thành công !");
                         
                         this.Hide();
-                        HomeAdmin homeAdmin = new HomeAdmin();
-                        homeAdmin.ShowDialog();
+                        FormDeThi formDeThi = new FormDeThi();
+                        formDeThi.ShowDialog();
                         this.Close();
                     }
                     else

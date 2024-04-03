@@ -21,9 +21,11 @@ namespace WindowsFormsApp_Login.Admin.View
         public FormDeThi()
         {
             InitializeComponent();
+            
             ExamModify examModify = new ExamModify();
             subject = examModify.GetSubject("SELECT * FROM list_subject ");
             exams = examModify.GetExams("SELECT * FROM list_exam  ");
+            cB_tende.Texts= subject[0].NameExam;
             ShowData();
             ShowSubject();
             
@@ -52,13 +54,7 @@ namespace WindowsFormsApp_Login.Admin.View
                 cB_tende.Items.Add(subjects.NameExam);
             }
         }
-        private void backbtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            HomeAdmin homeAdmin = new HomeAdmin();
-            homeAdmin.ShowDialog();
-            this.Close();
-        }
+        
 
         
         private int GetSelectedExamId()
@@ -124,7 +120,7 @@ namespace WindowsFormsApp_Login.Admin.View
                     
                     if (selectedExamData.Count > 0)
                     { // Hiển thị thông tin của đề thi trong các điều khiển
-                        cB_tende.Text = selectedExamData[0].Name_exam;
+                        cB_tende.Texts = selectedExamData[0].Name_exam;
                         cB_socau.Text = selectedExamData[0].Number_question.ToString();
                         tB_deso.Text = selectedExamData[0].Exam_number.ToString();
                         cB_time.Text = selectedExamData[0].Time.ToString();
@@ -154,13 +150,7 @@ namespace WindowsFormsApp_Login.Admin.View
             this.Close();
         }
 
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            HomeAdmin homeAdmin = new HomeAdmin();
-            homeAdmin.ShowDialog();
-            this.Close();
-        }
+        
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
@@ -254,12 +244,18 @@ namespace WindowsFormsApp_Login.Admin.View
 
         private void rjButton5_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+            this.Close();
         }
 
         private void rjButton4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ThongKe thongKe = new ThongKe();
+            thongKe.ShowDialog();
+            this.Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -269,7 +265,10 @@ namespace WindowsFormsApp_Login.Admin.View
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormUser formUser = new FormUser();
+            formUser.ShowDialog();
+            this.Close();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -285,6 +284,20 @@ namespace WindowsFormsApp_Login.Admin.View
         private void rjCircularBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cB_tende_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedName = cB_tende.SelectedItem.ToString();
+
+            // Tìm kiếm trong danh sách đề thi với tên được chọn
+            var matchingExams = exams.Where(ex => ex.Name_exam == selectedName).ToList();
+
+            // Lấy số đề của đề thi được chọn
+            int numberExam = matchingExams.Count + 1;
+
+            // Hiển thị số đề lên textBox
+            tB_deso.Text = numberExam.ToString();
         }
     }
 }

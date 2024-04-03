@@ -34,11 +34,6 @@
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
             this.MonHocOption = new CustomBox.RJControls.RJComboBox();
             this.KetQuaTable = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
@@ -53,6 +48,12 @@
             this.thayĐổiThôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thayĐổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.KetQuaTable)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -120,45 +121,18 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column6});
             this.KetQuaTable.DoubleBuffered = true;
             this.KetQuaTable.EnableHeadersVisualStyles = false;
             this.KetQuaTable.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
             this.KetQuaTable.HeaderForeColor = System.Drawing.Color.White;
-            this.KetQuaTable.Location = new System.Drawing.Point(144, 183);
+            this.KetQuaTable.Location = new System.Drawing.Point(36, 183);
             this.KetQuaTable.Name = "KetQuaTable";
             this.KetQuaTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.KetQuaTable.Size = new System.Drawing.Size(581, 319);
+            this.KetQuaTable.Size = new System.Drawing.Size(801, 319);
             this.KetQuaTable.TabIndex = 12;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ID";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 80;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Họ và tên";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Số đề đã hoàn thành";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 160;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tổng điểm";
-            this.Column5.Name = "Column5";
+            this.KetQuaTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KetQuaTable_CellContentClick);
             // 
             // panel1
             // 
@@ -321,6 +295,41 @@
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "TOP";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "ID";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 80;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Họ và tên";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 180;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Số đề đã hoàn thành";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Tổng điểm";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Tổng thời gian";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 150;
+            // 
             // BXH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,5 +378,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

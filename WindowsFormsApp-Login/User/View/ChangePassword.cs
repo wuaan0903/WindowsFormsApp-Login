@@ -120,33 +120,47 @@ namespace WindowsFormsApp_Login.User.View
             string oldPassword = textBox1.Text;
             string newPassword = textBox2.Text;
             string confirmNewPassword = textBox3.Text;
-            
+
+            // Kiểm tra các trường thông tin nếu bị bỏ trống
+            if (string.IsNullOrEmpty(oldPassword) || string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmNewPassword))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
             bool isOldPasswordCorrect = VerifyOldPassword(id_User, oldPassword);
             if (!isOldPasswordCorrect)
             {
                 MessageBox.Show("Mật khẩu cũ không chính xác!");
-                return; 
+                return;
             }
 
-            
+            if (newPassword == oldPassword)
+            {
+                MessageBox.Show("Mật khẩu mới phải khác mật khẩu cũ!");
+                return;
+            }
+
             if (newPassword != confirmNewPassword)
             {
                 MessageBox.Show("Mật khẩu mới và mật khẩu nhập lại không khớp!");
-                return; 
+                return;
             }
 
-            
-            ExamModify examModify = new ExamModify();
-            bool success = examModify.ChangePassword(id_User, newPassword);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thay đổi mật khẩu?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                ExamModify examModify = new ExamModify();
+                bool success = examModify.ChangePassword(id_User, newPassword);
 
-            if (success)
-            {
-                MessageBox.Show("Thay đổi mật khẩu thành công!");
-                
-            }
-            else
-            {
-                MessageBox.Show("Thay đổi mật khẩu thất bại!");
+                if (success)
+                {
+                    MessageBox.Show("Thay đổi mật khẩu thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thay đổi mật khẩu thất bại!");
+                }
             }
         }
 
