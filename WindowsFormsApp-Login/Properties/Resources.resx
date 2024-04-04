@@ -166,6 +166,9 @@
   <data name="home-solid-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="stats-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stats-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="21504082051" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\21504082051.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,9 +177,6 @@
   </data>
   <data name="book-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg dangky1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg dangky1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="right-arrow-alt-regular-36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right-arrow-alt-regular-36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,6 +193,9 @@
   <data name="lambai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Design\lambai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user-detail-solid-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-detail-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="290ss13894_7527054" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\290ss13894_7527054.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,8 +211,8 @@
   <data name="2150408205" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2150408205.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-detail-solid-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-detail-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg dangky1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg dangky1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hand-drawn-glossary-illustration_52683-1119621" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hand-drawn-glossary-illustration_52683-1119621.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +223,7 @@
   <data name="333-18364548" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\333-18364548.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stats-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stats-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-detail-solid-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-detail-solid-241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

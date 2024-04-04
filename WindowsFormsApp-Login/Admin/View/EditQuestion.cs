@@ -50,9 +50,8 @@ namespace WindowsFormsApp_Login.Admin.View
 
         private void backbtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormDeThi fm = new FormDeThi();
-            fm.ShowDialog();
+            
+            
             this.Close();
         }
         public void View()
@@ -267,8 +266,7 @@ namespace WindowsFormsApp_Login.Admin.View
 
             MessageBox.Show("Thêm câu hỏi vào đề thành công !");
             
-            FormDeThi fm = new FormDeThi();
-            fm.ShowDialog();
+            
             this.Close();
         }
     }

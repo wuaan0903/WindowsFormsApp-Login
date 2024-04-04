@@ -164,7 +164,7 @@
             this.DapAnDTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DapAnDTxt.FlatAppearance.BorderSize = 0;
             this.DapAnDTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DapAnDTxt.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DapAnDTxt.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DapAnDTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnDTxt.Location = new System.Drawing.Point(3, 2);
             this.DapAnDTxt.Name = "DapAnDTxt";
@@ -195,7 +195,7 @@
             this.DapAnCTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DapAnCTxt.FlatAppearance.BorderSize = 0;
             this.DapAnCTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DapAnCTxt.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DapAnCTxt.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DapAnCTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnCTxt.Location = new System.Drawing.Point(5, 1);
             this.DapAnCTxt.Name = "DapAnCTxt";
@@ -226,7 +226,7 @@
             this.DapAnBTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DapAnBTxt.FlatAppearance.BorderSize = 0;
             this.DapAnBTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DapAnBTxt.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DapAnBTxt.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DapAnBTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnBTxt.Location = new System.Drawing.Point(3, 0);
             this.DapAnBTxt.Name = "DapAnBTxt";
@@ -257,7 +257,7 @@
             this.DapAnATxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DapAnATxt.FlatAppearance.BorderSize = 0;
             this.DapAnATxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DapAnATxt.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DapAnATxt.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DapAnATxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DapAnATxt.Location = new System.Drawing.Point(5, 3);
             this.DapAnATxt.Name = "DapAnATxt";

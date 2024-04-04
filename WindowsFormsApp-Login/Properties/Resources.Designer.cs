@@ -393,6 +393,16 @@ namespace WindowsFormsApp_Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_detail_solid_241 {
+            get {
+                object obj = ResourceManager.GetObject("user-detail-solid-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wallpaperflare_com_wallpaper__2_ {
             get {
                 object obj = ResourceManager.GetObject("wallpaperflare.com_wallpaper (2)", resourceCulture);

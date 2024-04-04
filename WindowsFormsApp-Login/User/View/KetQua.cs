@@ -17,14 +17,18 @@ namespace WindowsFormsApp_Login.User.View
     {
         private int id_User;
         private ExamModify examModify;
+        Modify modify = new Modify();   
         public KetQua(int id_User)
         {
             InitializeComponent();
-            string[] row = new string[] { "1", "1", "9", "5 phút 30 giây", "14/3/2024" }; // Dữ liệu cần thêm
-            KetQuaTable.Rows.Add(row); // Thêm dữ liệu vào DataGridView
             this.id_User = id_User;
             this.examModify = new ExamModify();
             DisplayHistoryTests();
+
+            List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
+            string querry = "SELECT * FROM Users WHERE Id_User = '" + id_User + "'";
+            taiKhoans = modify.TaiKhoans(querry);
+            FullName.Text = taiKhoans[0].Fullname;
 
         }
 
@@ -180,7 +184,7 @@ namespace WindowsFormsApp_Login.User.View
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            rjDropdownMenu1.Show(rjButton1, -1 / 2 * rjButton1.Width, rjButton1.Height);
+            rjDropdownMenu1.Show(FullName, -1 / 2 * FullName.Width, FullName.Height);
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -208,8 +212,8 @@ namespace WindowsFormsApp_Login.User.View
         private void vàoThiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LamBai lamBai = new LamBai();
-            lamBai.ShowDialog();
+            ChooseExam chooseExam = new ChooseExam(id_User);
+            chooseExam.ShowDialog();
             this.Close();
         }
 

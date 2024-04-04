@@ -100,8 +100,8 @@ namespace WindowsFormsApp_Login
                         MessageBox.Show("Đăng nhập thành công !");
                         
                         this.Hide();
-                        FormDeThi formDeThi = new FormDeThi();
-                        formDeThi.ShowDialog();
+                        HomeAdmin homeAdmin = new HomeAdmin();
+                        homeAdmin.ShowDialog();
                         this.Close();
                     }
                     else

@@ -38,10 +38,10 @@
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton6 = new RJCodeAdvance.RJControls.RJButton();
             this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.soDeThiTxt = new System.Windows.Forms.Label();
+            this.soNguoiDungTxt = new System.Windows.Forms.Label();
             this.rjButton7 = new RJCodeAdvance.RJControls.RJButton();
-            this.label3 = new System.Windows.Forms.Label();
+            this.soLuotThiTxt = new System.Windows.Forms.Label();
             this.rjButton8 = new RJCodeAdvance.RJControls.RJButton();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.panel1.SuspendLayout();
@@ -146,6 +146,7 @@
             this.rjButton4.Text = "Thống kê";
             this.rjButton4.TextColor = System.Drawing.Color.White;
             this.rjButton4.UseVisualStyleBackColor = false;
+            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
             // 
             // rjButton3
             // 
@@ -236,29 +237,29 @@
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // soDeThiTxt
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
-            this.label1.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(367, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 51);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "30";
+            this.soDeThiTxt.AutoSize = true;
+            this.soDeThiTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.soDeThiTxt.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soDeThiTxt.ForeColor = System.Drawing.Color.White;
+            this.soDeThiTxt.Location = new System.Drawing.Point(367, 69);
+            this.soDeThiTxt.Name = "soDeThiTxt";
+            this.soDeThiTxt.Size = new System.Drawing.Size(69, 51);
+            this.soDeThiTxt.TabIndex = 52;
+            this.soDeThiTxt.Text = "30";
             // 
-            // label2
+            // soNguoiDungTxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
-            this.label2.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(634, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 51);
-            this.label2.TabIndex = 57;
-            this.label2.Text = "16";
+            this.soNguoiDungTxt.AutoSize = true;
+            this.soNguoiDungTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.soNguoiDungTxt.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soNguoiDungTxt.ForeColor = System.Drawing.Color.White;
+            this.soNguoiDungTxt.Location = new System.Drawing.Point(634, 69);
+            this.soNguoiDungTxt.Name = "soNguoiDungTxt";
+            this.soNguoiDungTxt.Size = new System.Drawing.Size(61, 51);
+            this.soNguoiDungTxt.TabIndex = 57;
+            this.soNguoiDungTxt.Text = "16";
             // 
             // rjButton7
             // 
@@ -282,17 +283,17 @@
             this.rjButton7.TextColor = System.Drawing.Color.White;
             this.rjButton7.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // soLuotThiTxt
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
-            this.label3.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(899, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 51);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "60";
+            this.soLuotThiTxt.AutoSize = true;
+            this.soLuotThiTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(20)))), ((int)(((byte)(39)))));
+            this.soLuotThiTxt.Font = new System.Drawing.Font("Montserrat", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soLuotThiTxt.ForeColor = System.Drawing.Color.White;
+            this.soLuotThiTxt.Location = new System.Drawing.Point(899, 69);
+            this.soLuotThiTxt.Name = "soLuotThiTxt";
+            this.soLuotThiTxt.Size = new System.Drawing.Size(71, 51);
+            this.soLuotThiTxt.TabIndex = 59;
+            this.soLuotThiTxt.Text = "60";
             // 
             // rjButton8
             // 
@@ -318,9 +319,9 @@
             // 
             // cartesianChart1
             // 
-            this.cartesianChart1.Location = new System.Drawing.Point(289, 203);
+            this.cartesianChart1.Location = new System.Drawing.Point(278, 203);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(752, 364);
+            this.cartesianChart1.Size = new System.Drawing.Size(774, 381);
             this.cartesianChart1.TabIndex = 60;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
@@ -330,11 +331,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 597);
             this.Controls.Add(this.cartesianChart1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.soLuotThiTxt);
             this.Controls.Add(this.rjButton8);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.soNguoiDungTxt);
             this.Controls.Add(this.rjButton7);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.soDeThiTxt);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.panel1);
             this.Name = "ThongKe";
@@ -360,10 +361,10 @@
         private RJCodeAdvance.RJControls.RJButton rjButton1;
         private RJCodeAdvance.RJControls.RJButton rjButton6;
         private RJCodeAdvance.RJControls.RJButton rjButton2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label soDeThiTxt;
+        private System.Windows.Forms.Label soNguoiDungTxt;
         private RJCodeAdvance.RJControls.RJButton rjButton7;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label soLuotThiTxt;
         private RJCodeAdvance.RJControls.RJButton rjButton8;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }

@@ -15,15 +15,24 @@ namespace WindowsFormsApp_Login.User.View
     public partial class ChangePassword : Form
     {
         private int id_User;
+        Modify modify = new Modify();
         public ChangePassword(int id_User)
         {
             InitializeComponent();
+
+            List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
+            string querry = "SELECT * FROM Users WHERE Id_User = '" + id_User + "'";
+            taiKhoans = modify.TaiKhoans(querry);
+            FullName.Text = taiKhoans[0].Fullname;
+
             this.id_User = id_User;
+
+
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            rjDropdownMenu1.Show(rjButton1, -1 / 2 * rjButton1.Width, rjButton1.Height);
+            rjDropdownMenu1.Show(FullName, -1 / 2 * FullName.Width, FullName.Height);
         }
 
         private void rjTextBox1__TextChanged(object sender, EventArgs e)
@@ -93,8 +102,8 @@ namespace WindowsFormsApp_Login.User.View
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LamBai lamBai = new LamBai();
-            lamBai.ShowDialog();
+            ChooseExam chooseExam = new ChooseExam(id_User);
+            chooseExam.ShowDialog();
             this.Close();
         }
 
@@ -176,6 +185,14 @@ namespace WindowsFormsApp_Login.User.View
             textBox3.Text = "";
 
 
+        }
+
+        private void vàoThiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChooseExam chooseExam = new ChooseExam(id_User);
+            chooseExam.ShowDialog();
+            this.Close();
         }
     }
 }

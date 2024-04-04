@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.FullName = new RJCodeAdvance.RJControls.RJButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -77,6 +77,7 @@
             this.SubjectTable.HeaderForeColor = System.Drawing.Color.White;
             this.SubjectTable.Location = new System.Drawing.Point(69, 207);
             this.SubjectTable.Name = "SubjectTable";
+            this.SubjectTable.ReadOnly = true;
             this.SubjectTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.SubjectTable.Size = new System.Drawing.Size(741, 295);
             this.SubjectTable.TabIndex = 0;
@@ -135,7 +136,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.rjButton2);
+            this.panel1.Controls.Add(this.FullName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
@@ -154,27 +155,27 @@
             this.panel2.Size = new System.Drawing.Size(60, 3);
             this.panel2.TabIndex = 16;
             // 
-            // rjButton2
+            // FullName
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(583, 25);
-            this.rjButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(198, 36);
-            this.rjButton2.TabIndex = 5;
-            this.rjButton2.Text = "Nguyễn Minh Quân";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            this.FullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
+            this.FullName.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(12)))));
+            this.FullName.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.FullName.BorderRadius = 0;
+            this.FullName.BorderSize = 0;
+            this.FullName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FullName.FlatAppearance.BorderSize = 0;
+            this.FullName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FullName.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullName.ForeColor = System.Drawing.Color.White;
+            this.FullName.Location = new System.Drawing.Point(583, 25);
+            this.FullName.Margin = new System.Windows.Forms.Padding(2);
+            this.FullName.Name = "FullName";
+            this.FullName.Size = new System.Drawing.Size(198, 36);
+            this.FullName.TabIndex = 5;
+            this.FullName.Text = "Nguyễn Minh Quân";
+            this.FullName.TextColor = System.Drawing.Color.White;
+            this.FullName.UseVisualStyleBackColor = false;
+            this.FullName.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // label4
             // 
@@ -325,7 +326,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton FullName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;

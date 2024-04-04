@@ -18,16 +18,15 @@ using WindowsFormsApp_Login.User.Controller; //the WinForm wrappers
 
 namespace WindowsFormsApp_Login.Admin.View
 {
-    public partial class ThongKe : Form
+    public partial class FormThongKe : UserControl
     {
         List<Subject> subjects = new List<Subject>();
         List<Exam> exams = new List<Exam>();
-        List<History> history = new List<History>();    
+        List<History> history = new List<History>();
         List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
-        public ThongKe()
+        public FormThongKe()
         {
             InitializeComponent();
-
 
             ExamModify examModify = new ExamModify();
             Modify modify = new Modify();
@@ -41,28 +40,29 @@ namespace WindowsFormsApp_Login.Admin.View
             history = examModify.histories(querry);
 
             List<string> monHocList = new List<string>();
-            for(int i = 0; i < subjects.Count; i++)
+            for (int i = 0; i < subjects.Count; i++)
             {
                 monHocList.Add(subjects[i].NameExam);
             }
 
             List<int> soDeThi = new List<int>();
-            for(int i = 0; i< monHocList.Count; i++) {
+            for (int i = 0; i < monHocList.Count; i++)
+            {
                 int d = 0;
-                for(int j = 0;j< exams.Count; j++)
+                for (int j = 0; j < exams.Count; j++)
                 {
-                    if (exams[j].Name_exam== monHocList[i])
+                    if (exams[j].Name_exam == monHocList[i])
                     {
                         d++;
-                    }    
+                    }
                 }
                 soDeThi.Add(d);
             }
             int tongSoDeThi = 0;
-            for(int i =0; i< soDeThi.Count;i++)
+            for (int i = 0; i < soDeThi.Count; i++)
             {
                 tongSoDeThi = tongSoDeThi + soDeThi[i];
-            }    
+            }
             soDeThiTxt.Text = tongSoDeThi.ToString();
 
             List<int> soLuotThi = new List<int>();
@@ -90,7 +90,7 @@ namespace WindowsFormsApp_Login.Admin.View
             querry = "SELECT * FROM Users";
             taiKhoans = modify.TaiKhoans(querry);
             int tongSoNguoiDung = 0;
-            for(int i = 0; i<taiKhoans.Count; i++)
+            for (int i = 0; i < taiKhoans.Count; i++)
             {
                 tongSoDeThi++;
             }
@@ -100,7 +100,7 @@ namespace WindowsFormsApp_Login.Admin.View
             ChartValues<int> soDeThiValues = new ChartValues<int>(soDeThi);
             cartesianChart1.Series = new SeriesCollection
             {
-                
+
                 new ColumnSeries
                     {
                         Title = "Số đề thi",
@@ -122,28 +122,6 @@ namespace WindowsFormsApp_Login.Admin.View
                 Title = "Môn học",
                 Labels = monHocList.ToArray()
             });
-
-            
-        }
-
-
-        
-
-
-        private void rjButton3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MonHoc monHoc = new MonHoc();
-            monHoc.ShowDialog();
-            this.Close();
-        }
-
-        private void rjButton4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ThongKe thongKe = new ThongKe();
-            thongKe.ShowDialog();
-            this.Close();
         }
     }
 }

@@ -16,9 +16,16 @@ namespace WindowsFormsApp_Login.User.View
     {
         private int id_User;
         private ExamModify examModify;
+        Modify modify = new Modify();
         public InforUser(int id_User)
         {
             InitializeComponent();
+            List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
+            string querry = "SELECT * FROM Users WHERE Id_User = '" + id_User + "'";
+            taiKhoans = modify.TaiKhoans(querry);
+            FullName.Text = taiKhoans[0].Fullname;
+
+
             this.examModify = new ExamModify();
             this.id_User = id_User;
             PopulateUserInfo(id_User);
@@ -60,7 +67,7 @@ namespace WindowsFormsApp_Login.User.View
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            rjDropdownMenu1.Show(rjButton1, -1 / 2 * rjButton1.Width, rjButton1.Height);
+            rjDropdownMenu1.Show(FullName, -1 / 2 * FullName.Width, FullName.Height);
         }
 
 

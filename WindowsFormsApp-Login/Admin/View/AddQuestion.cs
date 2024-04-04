@@ -23,10 +23,10 @@ namespace WindowsFormsApp_Login.Admin.View
         public AddQuestion(int x, string s, int a, int b)
         {
             InitializeComponent();  
-            id_exam = a;
+            id_exam = x;
             nameExam = s;
             soCau = b;
-            numberExam = x;
+            numberExam = a;
             tenMon.Text = ("Môn học: " + nameExam);
             tenDe.Text = ("Đề số: " + a);
             cauHoi.Text = ("Câu số: " + (pos + 1));
@@ -113,7 +113,6 @@ namespace WindowsFormsApp_Login.Admin.View
                 {
                     Question q = new Question(
                         id_exam,
-                        numberExam,
                         question.Text,
                         answerA.Text,
                         answerB.Text,
@@ -181,7 +180,6 @@ namespace WindowsFormsApp_Login.Admin.View
 
                     Question q = new Question(
                         id_exam,
-                        numberExam,
                         question.Text,
                         answerA.Text,
                         answerB.Text,
@@ -243,7 +241,7 @@ namespace WindowsFormsApp_Login.Admin.View
                         answerValue,
                         1
                     );
-
+                    dataList[pos] = q;
                     foreach (Question c in dataList)
                     {
                         ExamModify.InsertQuestion(c);
@@ -251,10 +249,7 @@ namespace WindowsFormsApp_Login.Admin.View
                     MessageBox.Show("Thêm câu hỏi vào đề thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
 
-                    this.Hide();
-                    FormDeThi ef = new FormDeThi();
-                    ef.ShowDialog();
-                    this.Close();
+                    
                 }
             }
         }

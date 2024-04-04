@@ -32,6 +32,8 @@ namespace WindowsFormsApp_Login.User.View
             string user_querry = "SELECT * FROM Users WHERE Id_User = '" + id + "'";
             Modify modify = new Modify();
             taiKhoans = modify.TaiKhoans(user_querry);
+            FullName.Text = taiKhoans[0].Fullname;
+
 
             string querry = "SELECT * FROM list_subject";
             ExamModify examModify = new ExamModify(); 
@@ -109,7 +111,7 @@ namespace WindowsFormsApp_Login.User.View
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-            rjDropdownMenu1.Show(rjButton2, -1 / 2 * rjButton2.Width, rjButton2.Height);
+            rjDropdownMenu1.Show(FullName, -1 / 2 * FullName.Width, FullName.Height);
         }
 
         private void thayĐổiThôngTinToolStripMenuItem_Click(object sender, EventArgs e)

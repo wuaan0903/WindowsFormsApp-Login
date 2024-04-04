@@ -51,6 +51,9 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>C:\Users\admin\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -72,7 +75,9 @@
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -95,12 +100,6 @@
     <Compile Include="Admin\View\AddQuestion.Designer.cs">
       <DependentUpon>AddQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\View\chart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\View\chart.Designer.cs">
-      <DependentUpon>chart.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\View\EditQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,17 +112,47 @@
     <Compile Include="Admin\View\FormDeThi.Designer.cs">
       <DependentUpon>FormDeThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\View\FormThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\View\FormThongKe.Designer.cs">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\View\FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\View\FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\View\HomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\View\HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\View\MonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\View\MonHoc.Designer.cs">
       <DependentUpon>MonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View\QuanLyDeThi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\View\QuanLyDeThi.Designer.cs">
+      <DependentUpon>QuanLyDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View\QuanLyMonHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\View\QuanLyMonHoc.Designer.cs">
+      <DependentUpon>QuanLyMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\View\QuanLyNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\View\QuanLyNguoiDung.Designer.cs">
+      <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\View\ThongKe.cs">
       <SubType>Form</SubType>
@@ -235,20 +264,32 @@
     <EmbeddedResource Include="Admin\View\AddQuestion.resx">
       <DependentUpon>AddQuestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\View\chart.resx">
-      <DependentUpon>chart.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\View\EditQuestion.resx">
       <DependentUpon>EditQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\View\FormDeThi.resx">
       <DependentUpon>FormDeThi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\View\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\View\MonHoc.resx">
       <DependentUpon>MonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\QuanLyDeThi.resx">
+      <DependentUpon>QuanLyDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\QuanLyMonHoc.resx">
+      <DependentUpon>QuanLyMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\View\QuanLyNguoiDung.resx">
+      <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\View\ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
@@ -345,6 +386,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\user-detail-solid-241.png" />
     <None Include="Resources\stats-regular-24.png" />
     <None Include="Resources\book-regular-24.png" />
     <None Include="Resources\user-detail-solid-24.png" />
